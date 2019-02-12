@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyKhuyenMai", "QuanLyKhuyenMai\QuanLyKhuyenMai.csproj", "{D8CFD2BB-4A70-45A5-B549-563C87BB20E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicLayer", "BusinessLogicLayer\BusinessLogicLayer.csproj", "{9AA779B2-BEFE-44C6-A3FE-091F6678E6AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{3ECBB417-6210-408E-A063-48AFFC9D3769}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTransferObject", "DataTransferObject\DataTransferObject.csproj", "{A8BB95D2-99F1-4580-9F42-2CE0D48357F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools", "Tools\Tools.csproj", "{9D0ED80A-E0F0-4430-8E0D-392075AE8685}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UTPQuanLyKhuyenMai", "UTPQuanLyKhuyenMai\UTPQuanLyKhuyenMai.csproj", "{E8DCC84B-9868-4539-92D4-8B786F46BE76}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8CFD2BB-4A70-45A5-B549-563C87BB20E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8CFD2BB-4A70-45A5-B549-563C87BB20E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8CFD2BB-4A70-45A5-B549-563C87BB20E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8CFD2BB-4A70-45A5-B549-563C87BB20E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AA779B2-BEFE-44C6-A3FE-091F6678E6AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AA779B2-BEFE-44C6-A3FE-091F6678E6AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AA779B2-BEFE-44C6-A3FE-091F6678E6AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AA779B2-BEFE-44C6-A3FE-091F6678E6AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ECBB417-6210-408E-A063-48AFFC9D3769}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ECBB417-6210-408E-A063-48AFFC9D3769}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ECBB417-6210-408E-A063-48AFFC9D3769}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ECBB417-6210-408E-A063-48AFFC9D3769}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8BB95D2-99F1-4580-9F42-2CE0D48357F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8BB95D2-99F1-4580-9F42-2CE0D48357F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8BB95D2-99F1-4580-9F42-2CE0D48357F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8BB95D2-99F1-4580-9F42-2CE0D48357F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D0ED80A-E0F0-4430-8E0D-392075AE8685}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D0ED80A-E0F0-4430-8E0D-392075AE8685}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D0ED80A-E0F0-4430-8E0D-392075AE8685}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D0ED80A-E0F0-4430-8E0D-392075AE8685}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8DCC84B-9868-4539-92D4-8B786F46BE76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8DCC84B-9868-4539-92D4-8B786F46BE76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8DCC84B-9868-4539-92D4-8B786F46BE76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8DCC84B-9868-4539-92D4-8B786F46BE76}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3445F181-82EA-4358-B29D-658E139753D9}
+	EndGlobalSection
+EndGlobal
