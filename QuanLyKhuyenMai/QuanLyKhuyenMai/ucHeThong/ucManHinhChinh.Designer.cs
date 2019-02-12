@@ -115,6 +115,7 @@
             this.metroTile4.TileImage = ((System.Drawing.Image)(resources.GetObject("metroTile4.TileImage")));
             this.metroTile4.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile4.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.metroTile4.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile4.UseTileImage = true;
             // 
             // metroTile7
@@ -130,6 +131,7 @@
             this.metroTile7.TileImage = ((System.Drawing.Image)(resources.GetObject("metroTile7.TileImage")));
             this.metroTile7.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile7.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.metroTile7.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile7.UseTileImage = true;
             // 
             // metroTile6
@@ -138,13 +140,14 @@
             this.metroTile6.CustomBackground = true;
             this.metroTile6.Location = new System.Drawing.Point(489, 348);
             this.metroTile6.Name = "metroTile6";
-            this.metroTile6.Size = new System.Drawing.Size(169, 146);
+            this.metroTile6.Size = new System.Drawing.Size(177, 146);
             this.metroTile6.TabIndex = 2;
             this.metroTile6.Text = "Kế toán";
             this.metroTile6.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.metroTile6.TileImage = ((System.Drawing.Image)(resources.GetObject("metroTile6.TileImage")));
             this.metroTile6.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile6.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.metroTile6.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile6.UseTileImage = true;
             // 
             // metroTile8
@@ -161,6 +164,7 @@
             this.metroTile8.TileImage = ((System.Drawing.Image)(resources.GetObject("metroTile8.TileImage")));
             this.metroTile8.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile8.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.metroTile8.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile8.UseTileImage = true;
             // 
             // metroTile5
@@ -169,43 +173,46 @@
             this.metroTile5.CustomBackground = true;
             this.metroTile5.Location = new System.Drawing.Point(489, 196);
             this.metroTile5.Name = "metroTile5";
-            this.metroTile5.Size = new System.Drawing.Size(169, 146);
+            this.metroTile5.Size = new System.Drawing.Size(177, 146);
             this.metroTile5.TabIndex = 2;
             this.metroTile5.Text = "Bán hàng";
             this.metroTile5.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.metroTile5.TileImage = ((System.Drawing.Image)(resources.GetObject("metroTile5.TileImage")));
             this.metroTile5.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile5.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.metroTile5.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile5.UseTileImage = true;
             // 
             // metroTile9
             // 
             this.metroTile9.BackColor = System.Drawing.Color.BlueViolet;
             this.metroTile9.CustomBackground = true;
-            this.metroTile9.Location = new System.Drawing.Point(243, 196);
+            this.metroTile9.Location = new System.Drawing.Point(238, 196);
             this.metroTile9.Name = "metroTile9";
-            this.metroTile9.Size = new System.Drawing.Size(198, 146);
+            this.metroTile9.Size = new System.Drawing.Size(203, 146);
             this.metroTile9.TabIndex = 2;
             this.metroTile9.Text = "Sản phẩm";
             this.metroTile9.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.metroTile9.TileImage = ((System.Drawing.Image)(resources.GetObject("metroTile9.TileImage")));
             this.metroTile9.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile9.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.metroTile9.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile9.UseTileImage = true;
             // 
             // metroTile2
             // 
             this.metroTile2.BackColor = System.Drawing.Color.Green;
             this.metroTile2.CustomBackground = true;
-            this.metroTile2.Location = new System.Drawing.Point(243, 44);
+            this.metroTile2.Location = new System.Drawing.Point(238, 44);
             this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(198, 146);
+            this.metroTile2.Size = new System.Drawing.Size(203, 146);
             this.metroTile2.TabIndex = 2;
             this.metroTile2.Text = "Nhân viên";
             this.metroTile2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.metroTile2.TileImage = ((System.Drawing.Image)(resources.GetObject("metroTile2.TileImage")));
             this.metroTile2.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile2.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.metroTile2.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile2.UseTileImage = true;
             // 
             // metroTile1
@@ -214,28 +221,30 @@
             this.metroTile1.CustomBackground = true;
             this.metroTile1.Location = new System.Drawing.Point(30, 196);
             this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(198, 146);
+            this.metroTile1.Size = new System.Drawing.Size(203, 146);
             this.metroTile1.TabIndex = 2;
             this.metroTile1.Text = "Khách hàng";
             this.metroTile1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.metroTile1.TileImage = ((System.Drawing.Image)(resources.GetObject("metroTile1.TileImage")));
             this.metroTile1.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile1.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.metroTile1.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile1.UseTileImage = true;
             // 
             // btnHeThong
             // 
             this.btnHeThong.BackColor = System.Drawing.Color.Teal;
             this.btnHeThong.CustomBackground = true;
-            this.btnHeThong.Location = new System.Drawing.Point(30, 44);
+            this.btnHeThong.Location = new System.Drawing.Point(29, 44);
             this.btnHeThong.Name = "btnHeThong";
-            this.btnHeThong.Size = new System.Drawing.Size(198, 146);
+            this.btnHeThong.Size = new System.Drawing.Size(203, 146);
             this.btnHeThong.TabIndex = 2;
             this.btnHeThong.Text = "Hệ thống";
             this.btnHeThong.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnHeThong.TileImage = ((System.Drawing.Image)(resources.GetObject("btnHeThong.TileImage")));
             this.btnHeThong.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnHeThong.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.btnHeThong.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.btnHeThong.UseTileImage = true;
             // 
             // ucManHinhChinh
