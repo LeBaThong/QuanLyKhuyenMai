@@ -30,10 +30,11 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.txtTaiKhoan = new MetroFramework.Controls.MetroTextBox();
             this.txtMatKhau = new MetroFramework.Controls.MetroTextBox();
+            this.txtTaiKhoan = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.btnDangNhap = new MetroFramework.Controls.MetroButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -57,6 +58,7 @@
             // 
             // metroPanel1
             // 
+            this.metroPanel1.Controls.Add(this.btnDangNhap);
             this.metroPanel1.Controls.Add(this.txtMatKhau);
             this.metroPanel1.Controls.Add(this.txtTaiKhoan);
             this.metroPanel1.Controls.Add(this.metroLabel2);
@@ -72,14 +74,20 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // metroLabel1
+            // txtMatKhau
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(23, 32);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(63, 19);
-            this.metroLabel1.TabIndex = 2;
-            this.metroLabel1.Text = "Tài khoản";
+            this.txtMatKhau.Location = new System.Drawing.Point(103, 72);
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.PasswordChar = '*';
+            this.txtMatKhau.Size = new System.Drawing.Size(182, 23);
+            this.txtMatKhau.TabIndex = 3;
+            // 
+            // txtTaiKhoan
+            // 
+            this.txtTaiKhoan.Location = new System.Drawing.Point(103, 27);
+            this.txtTaiKhoan.Name = "txtTaiKhoan";
+            this.txtTaiKhoan.Size = new System.Drawing.Size(182, 23);
+            this.txtTaiKhoan.TabIndex = 3;
             // 
             // metroLabel2
             // 
@@ -90,20 +98,23 @@
             this.metroLabel2.TabIndex = 2;
             this.metroLabel2.Text = "Mật khẩu";
             // 
-            // txtTaiKhoan
+            // metroLabel1
             // 
-            this.txtTaiKhoan.Location = new System.Drawing.Point(103, 27);
-            this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.Size = new System.Drawing.Size(164, 23);
-            this.txtTaiKhoan.TabIndex = 3;
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(23, 32);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(63, 19);
+            this.metroLabel1.TabIndex = 2;
+            this.metroLabel1.Text = "Tài khoản";
             // 
-            // txtMatKhau
+            // btnDangNhap
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(103, 72);
-            this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.PasswordChar = '*';
-            this.txtMatKhau.Size = new System.Drawing.Size(164, 23);
-            this.txtMatKhau.TabIndex = 3;
+            this.btnDangNhap.Location = new System.Drawing.Point(210, 110);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(75, 23);
+            this.btnDangNhap.TabIndex = 4;
+            this.btnDangNhap.Text = "Đăng nhập";
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // ucDangNhap
             // 
@@ -127,5 +138,6 @@
         private MetroFramework.Controls.MetroTextBox txtTaiKhoan;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroButton btnDangNhap;
     }
 }

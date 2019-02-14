@@ -32,7 +32,7 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.mPanelContainer = new MetroFramework.Controls.MetroPanel();
-            this.metroTile4 = new MetroFramework.Controls.MetroTile();
+            this.btnKhuyenMai = new MetroFramework.Controls.MetroTile();
             this.metroTile7 = new MetroFramework.Controls.MetroTile();
             this.metroTile6 = new MetroFramework.Controls.MetroTile();
             this.metroTile8 = new MetroFramework.Controls.MetroTile();
@@ -65,15 +65,15 @@
             // 
             // metroPanel1
             // 
-            this.metroPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.metroPanel1.BackColor = System.Drawing.Color.White;
             this.metroPanel1.Controls.Add(this.mPanelContainer);
             this.metroPanel1.CustomBackground = true;
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(39, 25);
+            this.metroPanel1.Location = new System.Drawing.Point(42, 29);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(939, 603);
+            this.metroPanel1.Size = new System.Drawing.Size(931, 594);
             this.metroPanel1.TabIndex = 0;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -82,7 +82,7 @@
             // mPanelContainer
             // 
             this.mPanelContainer.BackColor = System.Drawing.SystemColors.Control;
-            this.mPanelContainer.Controls.Add(this.metroTile4);
+            this.mPanelContainer.Controls.Add(this.btnKhuyenMai);
             this.mPanelContainer.Controls.Add(this.metroTile7);
             this.mPanelContainer.Controls.Add(this.metroTile6);
             this.mPanelContainer.Controls.Add(this.metroTile8);
@@ -94,7 +94,7 @@
             this.mPanelContainer.HorizontalScrollbarBarColor = true;
             this.mPanelContainer.HorizontalScrollbarHighlightOnWheel = false;
             this.mPanelContainer.HorizontalScrollbarSize = 10;
-            this.mPanelContainer.Location = new System.Drawing.Point(17, 22);
+            this.mPanelContainer.Location = new System.Drawing.Point(39, 39);
             this.mPanelContainer.Name = "mPanelContainer";
             this.mPanelContainer.Size = new System.Drawing.Size(860, 530);
             this.mPanelContainer.TabIndex = 2;
@@ -102,27 +102,28 @@
             this.mPanelContainer.VerticalScrollbarHighlightOnWheel = false;
             this.mPanelContainer.VerticalScrollbarSize = 10;
             // 
-            // metroTile4
+            // btnKhuyenMai
             // 
-            this.metroTile4.BackColor = System.Drawing.Color.RoyalBlue;
-            this.metroTile4.CustomBackground = true;
-            this.metroTile4.Location = new System.Drawing.Point(30, 348);
-            this.metroTile4.Name = "metroTile4";
-            this.metroTile4.Size = new System.Drawing.Size(411, 146);
-            this.metroTile4.TabIndex = 2;
-            this.metroTile4.Text = "Khuyến mãi";
-            this.metroTile4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.metroTile4.TileImage = ((System.Drawing.Image)(resources.GetObject("metroTile4.TileImage")));
-            this.metroTile4.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile4.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile4.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.metroTile4.UseTileImage = true;
+            this.btnKhuyenMai.BackColor = System.Drawing.Color.Navy;
+            this.btnKhuyenMai.CustomBackground = true;
+            this.btnKhuyenMai.Location = new System.Drawing.Point(30, 346);
+            this.btnKhuyenMai.Name = "btnKhuyenMai";
+            this.btnKhuyenMai.Size = new System.Drawing.Size(411, 146);
+            this.btnKhuyenMai.TabIndex = 2;
+            this.btnKhuyenMai.Text = "Khuyến mãi";
+            this.btnKhuyenMai.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnKhuyenMai.TileImage = ((System.Drawing.Image)(resources.GetObject("btnKhuyenMai.TileImage")));
+            this.btnKhuyenMai.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnKhuyenMai.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.btnKhuyenMai.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.btnKhuyenMai.UseTileImage = true;
+            this.btnKhuyenMai.Click += new System.EventHandler(this.btnKhuyenMai_Click);
             // 
             // metroTile7
             // 
             this.metroTile7.BackColor = System.Drawing.SystemColors.HotTrack;
             this.metroTile7.CustomBackground = true;
-            this.metroTile7.Location = new System.Drawing.Point(489, 44);
+            this.metroTile7.Location = new System.Drawing.Point(489, 42);
             this.metroTile7.Name = "metroTile7";
             this.metroTile7.Size = new System.Drawing.Size(341, 146);
             this.metroTile7.TabIndex = 2;
@@ -138,7 +139,7 @@
             // 
             this.metroTile6.BackColor = System.Drawing.Color.Chocolate;
             this.metroTile6.CustomBackground = true;
-            this.metroTile6.Location = new System.Drawing.Point(489, 348);
+            this.metroTile6.Location = new System.Drawing.Point(489, 346);
             this.metroTile6.Name = "metroTile6";
             this.metroTile6.Size = new System.Drawing.Size(177, 146);
             this.metroTile6.TabIndex = 2;
@@ -154,7 +155,7 @@
             // 
             this.metroTile8.BackColor = System.Drawing.Color.DarkGreen;
             this.metroTile8.CustomBackground = true;
-            this.metroTile8.Location = new System.Drawing.Point(672, 196);
+            this.metroTile8.Location = new System.Drawing.Point(672, 194);
             this.metroTile8.Name = "metroTile8";
             this.metroTile8.Size = new System.Drawing.Size(158, 298);
             this.metroTile8.TabIndex = 2;
@@ -171,7 +172,7 @@
             // 
             this.metroTile5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.metroTile5.CustomBackground = true;
-            this.metroTile5.Location = new System.Drawing.Point(489, 196);
+            this.metroTile5.Location = new System.Drawing.Point(489, 194);
             this.metroTile5.Name = "metroTile5";
             this.metroTile5.Size = new System.Drawing.Size(177, 146);
             this.metroTile5.TabIndex = 2;
@@ -187,7 +188,7 @@
             // 
             this.metroTile9.BackColor = System.Drawing.Color.BlueViolet;
             this.metroTile9.CustomBackground = true;
-            this.metroTile9.Location = new System.Drawing.Point(238, 196);
+            this.metroTile9.Location = new System.Drawing.Point(238, 194);
             this.metroTile9.Name = "metroTile9";
             this.metroTile9.Size = new System.Drawing.Size(203, 146);
             this.metroTile9.TabIndex = 2;
@@ -203,7 +204,7 @@
             // 
             this.metroTile2.BackColor = System.Drawing.Color.Green;
             this.metroTile2.CustomBackground = true;
-            this.metroTile2.Location = new System.Drawing.Point(238, 44);
+            this.metroTile2.Location = new System.Drawing.Point(238, 42);
             this.metroTile2.Name = "metroTile2";
             this.metroTile2.Size = new System.Drawing.Size(203, 146);
             this.metroTile2.TabIndex = 2;
@@ -219,7 +220,7 @@
             // 
             this.metroTile1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(73)))), ((int)(((byte)(40)))));
             this.metroTile1.CustomBackground = true;
-            this.metroTile1.Location = new System.Drawing.Point(30, 196);
+            this.metroTile1.Location = new System.Drawing.Point(30, 194);
             this.metroTile1.Name = "metroTile1";
             this.metroTile1.Size = new System.Drawing.Size(203, 146);
             this.metroTile1.TabIndex = 2;
@@ -235,7 +236,7 @@
             // 
             this.btnHeThong.BackColor = System.Drawing.Color.Teal;
             this.btnHeThong.CustomBackground = true;
-            this.btnHeThong.Location = new System.Drawing.Point(29, 44);
+            this.btnHeThong.Location = new System.Drawing.Point(29, 42);
             this.btnHeThong.Name = "btnHeThong";
             this.btnHeThong.Size = new System.Drawing.Size(203, 146);
             this.btnHeThong.TabIndex = 2;
@@ -267,7 +268,7 @@
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroPanel mPanelContainer;
         private MetroFramework.Controls.MetroTile btnHeThong;
-        private MetroFramework.Controls.MetroTile metroTile4;
+        private MetroFramework.Controls.MetroTile btnKhuyenMai;
         private MetroFramework.Controls.MetroTile metroTile7;
         private MetroFramework.Controls.MetroTile metroTile6;
         private MetroFramework.Controls.MetroTile metroTile8;
