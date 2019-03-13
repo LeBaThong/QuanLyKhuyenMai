@@ -31,8 +31,26 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,8 +59,80 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CAPDOTHE.cs">
+      <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CHITIETDONHANG.cs">
+      <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CHITIETHOADON.cs">
+      <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CHITIETSANPHAMTANGKEM.cs">
+      <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
+    </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="DANHGIADICHVU.cs">
+      <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DONHANG.cs">
+      <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HINHTHUCGIAMGIA.cs">
+      <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HINHTHUCTANGKEM.cs">
+      <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HINHTHUCVOUCHER.cs">
+      <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HOADON.cs">
+      <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KHACHHANG.cs">
+      <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KHUYENMAI.cs">
+      <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LOAIDICHVU.cs">
+      <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LOAIKHACHHANG.cs">
+      <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LOAISANPHAM.cs">
+      <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MUCDOHAILONG.cs">
+      <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyKhuyenMai.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyKhuyenMai.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyKhuyenMai.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyKhuyenMai.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyKhuyenMai.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="SANPHAM.cs">
+      <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
+    </Compile>
+    <Compile Include="THETHANHVIEN.cs">
+      <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataTransferObject\DataTransferObject.csproj">
@@ -53,6 +143,32 @@
       <Project>{9d0ed80a-e0f0-4430-8e0d-392075ae8685}</Project>
       <Name>Tools</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <EntityDeploy Include="QuanLyKhuyenMai.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QuanLyKhuyenMai.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="QuanLyKhuyenMai.edmx.diagram">
+      <DependentUpon>QuanLyKhuyenMai.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="QuanLyKhuyenMai.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>QuanLyKhuyenMai.Context.cs</LastGenOutput>
+      <DependentUpon>QuanLyKhuyenMai.edmx</DependentUpon>
+    </Content>
+    <Content Include="QuanLyKhuyenMai.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuanLyKhuyenMai.edmx</DependentUpon>
+      <LastGenOutput>QuanLyKhuyenMai.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

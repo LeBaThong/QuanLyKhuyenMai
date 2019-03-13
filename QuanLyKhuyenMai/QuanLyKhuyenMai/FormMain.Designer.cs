@@ -34,7 +34,7 @@
             // mPanelChinh
             // 
             this.mPanelChinh.BackColor = System.Drawing.Color.White;
-            this.mPanelChinh.CustomBackground = true;
+            this.mPanelChinh.UseCustomBackColor = true;
             this.mPanelChinh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mPanelChinh.HorizontalScrollbarBarColor = true;
             this.mPanelChinh.HorizontalScrollbarHighlightOnWheel = false;
