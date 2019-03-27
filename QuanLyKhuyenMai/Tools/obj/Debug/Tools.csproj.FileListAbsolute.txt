@@ -1,0 +1,10 @@
+C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\Tools\bin\Debug\Tools.dll
+C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\Tools\bin\Debug\Tools.pdb
+C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\Tools\obj\Debug\Tools.csprojAssemblyReference.cache
+C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\Tools\obj\Debug\Tools.csproj.CoreCompileInputs.cache
+C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\Tools\obj\Debug\Tools.dll
+C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\Tools\obj\Debug\Tools.pdb
+C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\Tools\bin\Debug\MetroFramework.Design.dll
+C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\Tools\bin\Debug\MetroFramework.dll
+C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\Tools\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\Tools\obj\Debug\Tools.csproj.CopyComplete

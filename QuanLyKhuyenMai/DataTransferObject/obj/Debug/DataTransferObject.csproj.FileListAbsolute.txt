@@ -1,0 +1,12 @@
+C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\DataTransferObject\bin\Debug\DataTransferObject.dll
+C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\DataTransferObject\bin\Debug\DataTransferObject.pdb
+C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\DataTransferObject\bin\Debug\Tools.dll
+C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\DataTransferObject\bin\Debug\Tools.pdb
+C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\DataTransferObject\obj\Debug\DataTransferObject.csprojAssemblyReference.cache
+C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\DataTransferObject\obj\Debug\DataTransferObject.csproj.CoreCompileInputs.cache
+C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\DataTransferObject\obj\Debug\DataTransferObject.csproj.CopyComplete
+C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\DataTransferObject\obj\Debug\DataTransferObject.dll
+C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\DataTransferObject\obj\Debug\DataTransferObject.pdb
+C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\DataTransferObject\bin\Debug\MetroFramework.Design.dll
+C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\DataTransferObject\bin\Debug\MetroFramework.dll
+C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\DataTransferObject\bin\Debug\MetroFramework.Fonts.dll
