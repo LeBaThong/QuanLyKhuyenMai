@@ -25,7 +25,7 @@ namespace DataAccessLayer
         public string TENKH { get; set; }
         public Nullable<bool> GIOITINH { get; set; }
         public Nullable<System.DateTime> NGAYSINH { get; set; }
-        public Nullable<decimal> SDT { get; set; }
+        public Nullable<int> SDT { get; set; }
         public string DIACHI { get; set; }
         public string EMAIL { get; set; }
         public Nullable<int> MALKH { get; set; }

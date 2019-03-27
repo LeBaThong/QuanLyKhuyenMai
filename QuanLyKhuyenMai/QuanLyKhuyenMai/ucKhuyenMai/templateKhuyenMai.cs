@@ -128,32 +128,32 @@ namespace QuanLyKhuyenMai.ucKhuyenMai
                         mPanelContent.Controls.Add(uc);
                         mPanelContent.Controls["ucChuongTrinhKhuyenMai"].BringToFront();
                     }; break;
-                //case "ucNhanVienThoiViec":
-                //    {
-                //        ucNhanVienThoiViec uc = new ucNhanVienThoiViec();
-                //        uc.Dock = DockStyle.Fill;
-                //        mPanelContent.Controls.Add(uc);
-                //        mPanelContent.Controls["ucNhanVienThoiViec"].BringToFront();
-                //    }; break;
-                //case "ucNhapXuatNhanVien":
-                //    {
-                //        ucNhapXuatNhanVien uc = new ucNhapXuatNhanVien();
-                //        uc.Dock = DockStyle.Fill;
-                //        mPanelContent.Controls.Add(uc);
-                //        mPanelContent.Controls["ucNhapXuatNhanVien"].BringToFront();
-                //    }; break;
-                //case "ucHopDongNhanVien":
-                //    {
-                //        ucHopDongNhanVien uc = new ucHopDongNhanVien();
-                //        uc.Dock = DockStyle.Fill;
-                //        mPanelContent.Controls.Add(uc);
-                //        mPanelContent.Controls["ucHopDongNhanVien"].BringToFront();
+                case "ucDonHang":
+                    {
+                        ucDonHang uc = new ucDonHang();
+                        uc.Dock = DockStyle.Fill;
+                        mPanelContent.Controls.Add(uc);
+                        mPanelContent.Controls["ucDonHang"].BringToFront();
+                    }; break;
+                    //case "ucNhapXuatNhanVien":
+                    //    {
+                    //        ucNhapXuatNhanVien uc = new ucNhapXuatNhanVien();
+                    //        uc.Dock = DockStyle.Fill;
+                    //        mPanelContent.Controls.Add(uc);
+                    //        mPanelContent.Controls["ucNhapXuatNhanVien"].BringToFront();
+                    //    }; break;
+                    //case "ucHopDongNhanVien":
+                    //    {
+                    //        ucHopDongNhanVien uc = new ucHopDongNhanVien();
+                    //        uc.Dock = DockStyle.Fill;
+                    //        mPanelContent.Controls.Add(uc);
+                    //        mPanelContent.Controls["ucHopDongNhanVien"].BringToFront();
 
-                //    }; break;
+                    //    }; break;
 
             }
         }
 
-
+       
     }
 }

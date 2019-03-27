@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessLogicLayer
+namespace DataTransferObject
 {
-    public class Class1
+    public enum HINHTHUCKHUYENMAI_DTO
     {
+        GIAM_GIA,
+        TANG_KEM,
+        VOUCHER
     }
 }

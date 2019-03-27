@@ -17,20 +17,16 @@ namespace DataAccessLayer
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public LOAIKHACHHANG()
         {
-            this.CAPDOTHEs = new HashSet<CAPDOTHE>();
             this.KHACHHANGs = new HashSet<KHACHHANG>();
             this.KHUYENMAIs = new HashSet<KHUYENMAI>();
         }
     
         public int MALKH { get; set; }
-        public int CAP_MACD { get; set; }
+        public int MACD { get; set; }
         public string TENLKH { get; set; }
         public Nullable<System.DateTime> NGAYTAO { get; set; }
         public string MOTA { get; set; }
-        public Nullable<int> MACD { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CAPDOTHE> CAPDOTHEs { get; set; }
         public virtual CAPDOTHE CAPDOTHE { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<KHACHHANG> KHACHHANGs { get; set; }

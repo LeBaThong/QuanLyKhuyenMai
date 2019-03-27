@@ -22,12 +22,10 @@ namespace DataAccessLayer
         }
     
         public int MACD { get; set; }
-        public int MALKH { get; set; }
         public string TENCD { get; set; }
         public Nullable<decimal> DIEMCD { get; set; }
         public Nullable<System.DateTime> NGAYTAO { get; set; }
     
-        public virtual LOAIKHACHHANG LOAIKHACHHANG { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LOAIKHACHHANG> LOAIKHACHHANGs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

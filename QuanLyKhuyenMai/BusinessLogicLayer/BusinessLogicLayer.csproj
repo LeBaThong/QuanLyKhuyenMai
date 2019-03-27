@@ -50,8 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="CHITIETDONHANG_BLL.cs" />
+    <Compile Include="DONHANG_BLL.cs" />
+    <Compile Include="HINHTHUCGIAMGIA_BLL.cs" />
+    <Compile Include="HINHTHUCTANGKEM_BLL.cs" />
+    <Compile Include="HINHTHUCVOUCHER_BLL.cs" />
+    <Compile Include="KHACHHANG_BLL.cs" />
+    <Compile Include="KHUYENMAI_BLL.cs" />
+    <Compile Include="HINHTHUCKHUYENMAI_BLL.cs" />
+    <Compile Include="LOAIKHACHHANG_BLL.cs" />
+    <Compile Include="LOAISANPHAM_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SANPHAM_BLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
@@ -68,7 +78,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

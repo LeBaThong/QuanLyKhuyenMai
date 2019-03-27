@@ -1,6 +1,6 @@
-﻿namespace QuanLyKhuyenMai.ucKhuyenMai
+﻿namespace QuanLyKhuyenMai.ucDonHang
 {
-    partial class templateKhuyenMai
+    partial class templateDonHang
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(templateKhuyenMai));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(templateDonHang));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnTroVe = new System.Windows.Forms.PictureBox();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
@@ -140,8 +140,8 @@
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.64583F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.35416F));
-            this.tableLayoutPanel2.Controls.Add(this.mPanelContent, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.mPanelMenu, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.mPanelContent, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 50);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -190,9 +190,9 @@
             this.mPanelHopDongNhanVien.VerticalScrollbarBarColor = true;
             this.mPanelHopDongNhanVien.VerticalScrollbarHighlightOnWheel = false;
             this.mPanelHopDongNhanVien.VerticalScrollbarSize = 10;
-            this.mPanelHopDongNhanVien.Click += new System.EventHandler(this.mPanel_Click);
-            this.mPanelHopDongNhanVien.MouseLeave += new System.EventHandler(this.mPanelMenuItem_MouseLeave);
-            this.mPanelHopDongNhanVien.MouseHover += new System.EventHandler(this.mPanelMenuItem_MouseHover);
+            //this.mPanelHopDongNhanVien.Click += new System.EventHandler(this.mPanel_Click);
+            //this.mPanelHopDongNhanVien.MouseLeave += new System.EventHandler(this.mPanelMenuItem_MouseLeave);
+            //this.mPanelHopDongNhanVien.MouseHover += new System.EventHandler(this.mPanelMenuItem_MouseHover);
             // 
             // metroLabel5
             // 
@@ -207,9 +207,9 @@
             this.metroLabel5.Text = "Thông tin khác";
             this.metroLabel5.UseCustomBackColor = true;
             this.metroLabel5.UseCustomForeColor = true;
-            this.metroLabel5.Click += new System.EventHandler(this.metroLabel_Click);
-            this.metroLabel5.MouseLeave += new System.EventHandler(this.metroLabel_MouseLeave);
-            this.metroLabel5.MouseHover += new System.EventHandler(this.metroLabel_MouseHover);
+            //this.metroLabel5.Click += new System.EventHandler(this.metroLabel_Click);
+            //this.metroLabel5.MouseLeave += new System.EventHandler(this.metroLabel_MouseLeave);
+            //this.metroLabel5.MouseHover += new System.EventHandler(this.metroLabel_MouseHover);
             // 
             // pictureBox5
             // 
@@ -239,9 +239,9 @@
             this.mPanelNhanVienThoiViec.VerticalScrollbarBarColor = true;
             this.mPanelNhanVienThoiViec.VerticalScrollbarHighlightOnWheel = false;
             this.mPanelNhanVienThoiViec.VerticalScrollbarSize = 10;
-            this.mPanelNhanVienThoiViec.Click += new System.EventHandler(this.mPanel_Click);
-            this.mPanelNhanVienThoiViec.MouseLeave += new System.EventHandler(this.mPanelMenuItem_MouseLeave);
-            this.mPanelNhanVienThoiViec.MouseHover += new System.EventHandler(this.mPanelMenuItem_MouseHover);
+            //this.mPanelNhanVienThoiViec.Click += new System.EventHandler(this.mPanel_Click);
+            //this.mPanelNhanVienThoiViec.MouseLeave += new System.EventHandler(this.mPanelMenuItem_MouseLeave);
+            //this.mPanelNhanVienThoiViec.MouseHover += new System.EventHandler(this.mPanelMenuItem_MouseHover);
             // 
             // metroLabel4
             // 
@@ -256,9 +256,9 @@
             this.metroLabel4.Text = "Khuyến mãi hết hạn";
             this.metroLabel4.UseCustomBackColor = true;
             this.metroLabel4.UseCustomForeColor = true;
-            this.metroLabel4.Click += new System.EventHandler(this.metroLabel_Click);
-            this.metroLabel4.MouseLeave += new System.EventHandler(this.metroLabel_MouseLeave);
-            this.metroLabel4.MouseHover += new System.EventHandler(this.metroLabel_MouseHover);
+            //this.metroLabel4.Click += new System.EventHandler(this.metroLabel_Click);
+            //this.metroLabel4.MouseLeave += new System.EventHandler(this.metroLabel_MouseLeave);
+            //this.metroLabel4.MouseHover += new System.EventHandler(this.metroLabel_MouseHover);
             // 
             // pictureBox4
             // 
@@ -271,7 +271,7 @@
             // 
             // mPanelNhapXuatNhanVien
             // 
-            this.mPanelNhapXuatNhanVien.AccessibleName = "ucDonHang";
+            this.mPanelNhapXuatNhanVien.AccessibleName = "ucNhapXuatNhanVien";
             this.mPanelNhapXuatNhanVien.Controls.Add(this.metroLabel3);
             this.mPanelNhapXuatNhanVien.Controls.Add(this.pictureBox3);
             this.mPanelNhapXuatNhanVien.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -288,10 +288,10 @@
             this.mPanelNhapXuatNhanVien.VerticalScrollbarBarColor = true;
             this.mPanelNhapXuatNhanVien.VerticalScrollbarHighlightOnWheel = false;
             this.mPanelNhapXuatNhanVien.VerticalScrollbarSize = 10;
-            this.mPanelNhapXuatNhanVien.Click += new System.EventHandler(this.mPanel_Click);
-            this.mPanelNhapXuatNhanVien.MouseLeave += new System.EventHandler(this.mPanelMenuItem_MouseLeave);
-            this.mPanelNhapXuatNhanVien.MouseHover += new System.EventHandler(this.mPanelMenuItem_MouseHover);
-            // 
+            //this.mPanelNhapXuatNhanVien.Click += new System.EventHandler(this.mPanel_Click);
+            //this.mPanelNhapXuatNhanVien.MouseLeave += new System.EventHandler(this.mPanelMenuItem_MouseLeave);
+            //this.mPanelNhapXuatNhanVien.MouseHover += new System.EventHandler(this.mPanelMenuItem_MouseHover);
+            //// 
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
@@ -300,14 +300,14 @@
             this.metroLabel3.ForeColor = System.Drawing.Color.White;
             this.metroLabel3.Location = new System.Drawing.Point(59, 13);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(175, 25);
+            this.metroLabel3.Size = new System.Drawing.Size(189, 25);
             this.metroLabel3.TabIndex = 4;
-            this.metroLabel3.Text = "Nhập xuất đơn hàng";
+            this.metroLabel3.Text = "Nhập xuất khuyến mãi";
             this.metroLabel3.UseCustomBackColor = true;
             this.metroLabel3.UseCustomForeColor = true;
-            this.metroLabel3.Click += new System.EventHandler(this.metroLabel_Click);
-            this.metroLabel3.MouseLeave += new System.EventHandler(this.metroLabel_MouseLeave);
-            this.metroLabel3.MouseHover += new System.EventHandler(this.metroLabel_MouseHover);
+            //this.metroLabel3.Click += new System.EventHandler(this.metroLabel_Click);
+            //this.metroLabel3.MouseLeave += new System.EventHandler(this.metroLabel_MouseLeave);
+            //this.metroLabel3.MouseHover += new System.EventHandler(this.metroLabel_MouseHover);
             // 
             // pictureBox3
             // 
@@ -337,9 +337,9 @@
             this.mPanelThongTinKhuyenMai.VerticalScrollbarBarColor = true;
             this.mPanelThongTinKhuyenMai.VerticalScrollbarHighlightOnWheel = false;
             this.mPanelThongTinKhuyenMai.VerticalScrollbarSize = 10;
-            this.mPanelThongTinKhuyenMai.Click += new System.EventHandler(this.mPanel_Click);
-            this.mPanelThongTinKhuyenMai.MouseLeave += new System.EventHandler(this.mPanelMenuItem_MouseLeave);
-            this.mPanelThongTinKhuyenMai.MouseHover += new System.EventHandler(this.mPanelMenuItem_MouseHover);
+            //this.mPanelThongTinKhuyenMai.Click += new System.EventHandler(this.mPanel_Click);
+            //this.mPanelThongTinKhuyenMai.MouseLeave += new System.EventHandler(this.mPanelMenuItem_MouseLeave);
+            //this.mPanelThongTinKhuyenMai.MouseHover += new System.EventHandler(this.mPanelMenuItem_MouseHover);
             // 
             // metroLabel2
             // 
@@ -354,9 +354,9 @@
             this.metroLabel2.Text = "Thông tin khuyến mãi";
             this.metroLabel2.UseCustomBackColor = true;
             this.metroLabel2.UseCustomForeColor = true;
-            this.metroLabel2.Click += new System.EventHandler(this.metroLabel_Click);
-            this.metroLabel2.MouseLeave += new System.EventHandler(this.metroLabel_MouseLeave);
-            this.metroLabel2.MouseHover += new System.EventHandler(this.metroLabel_MouseHover);
+            //this.metroLabel2.Click += new System.EventHandler(this.metroLabel_Click);
+            //this.metroLabel2.MouseLeave += new System.EventHandler(this.metroLabel_MouseLeave);
+            //this.metroLabel2.MouseHover += new System.EventHandler(this.metroLabel_MouseHover);
             // 
             // pictureBox2
             // 

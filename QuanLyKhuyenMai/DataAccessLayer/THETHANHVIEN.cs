@@ -21,12 +21,11 @@ namespace DataAccessLayer
         }
     
         public int MATHE { get; set; }
-        public Nullable<decimal> DIEM { get; set; }
+        public Nullable<int> DIEM { get; set; }
         public System.DateTime NGAYTAO { get; set; }
         public Nullable<System.DateTime> NGAYSUA { get; set; }
         public bool TINHTRANG { get; set; }
         public int MACD { get; set; }
-        public int MAKH { get; set; }
     
         public virtual CAPDOTHE CAPDOTHE { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -23,7 +23,7 @@ namespace DataAccessLayer
         public int MAHTGG { get; set; }
         public Nullable<int> MALSP { get; set; }
         public string TENHTGG { get; set; }
-        public Nullable<decimal> GIAMGIA { get; set; }
+        public Nullable<int> GIAMGIA { get; set; }
         public Nullable<System.DateTime> NGAYTAO { get; set; }
         public string MOTA { get; set; }
     

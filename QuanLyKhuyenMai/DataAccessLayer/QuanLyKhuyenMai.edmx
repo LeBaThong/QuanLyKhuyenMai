@@ -4,13 +4,12 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="QuanLyKhuyenMaiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="QuanLyKhuyenMaiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CAPDOTHE">
           <Key>
             <PropertyRef Name="MACD" />
           </Key>
-          <Property Name="MACD" Type="int" Nullable="false" />
-          <Property Name="MALKH" Type="int" Nullable="false" />
+          <Property Name="MACD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TENCD" Type="varchar" MaxLength="20" />
           <Property Name="DIEMCD" Type="numeric" Precision="10" Scale="0" />
           <Property Name="NGAYTAO" Type="datetime" />
@@ -19,7 +18,7 @@
           <Key>
             <PropertyRef Name="MACTDH" />
           </Key>
-          <Property Name="MACTDH" Type="int" Nullable="false" />
+          <Property Name="MACTDH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MADH" Type="int" />
           <Property Name="MASP" Type="int" />
         </EntityType>
@@ -27,7 +26,7 @@
           <Key>
             <PropertyRef Name="MACTHD" />
           </Key>
-          <Property Name="MACTHD" Type="int" Nullable="false" />
+          <Property Name="MACTHD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="SOHD" Type="int" />
           <Property Name="MASP" Type="int" />
         </EntityType>
@@ -35,7 +34,7 @@
           <Key>
             <PropertyRef Name="MASPTK" />
           </Key>
-          <Property Name="MASPTK" Type="int" Nullable="false" />
+          <Property Name="MASPTK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MADH" Type="int" />
           <Property Name="MASP" Type="int" />
         </EntityType>
@@ -43,7 +42,7 @@
           <Key>
             <PropertyRef Name="MADGDV" />
           </Key>
-          <Property Name="MADGDV" Type="int" Nullable="false" />
+          <Property Name="MADGDV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NGAYDGDV" Type="datetime" />
           <Property Name="MAMUC" Type="int" />
           <Property Name="MAKH" Type="int" />
@@ -53,7 +52,7 @@
           <Key>
             <PropertyRef Name="MADH" />
           </Key>
-          <Property Name="MADH" Type="int" Nullable="false" />
+          <Property Name="MADH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NGAYTAO" Type="datetime" />
           <Property Name="PHUONGTHUCTT" Type="varchar" MaxLength="20" />
           <Property Name="COKM" Type="bit" />
@@ -66,10 +65,10 @@
           <Key>
             <PropertyRef Name="MAHTGG" />
           </Key>
-          <Property Name="MAHTGG" Type="int" Nullable="false" />
+          <Property Name="MAHTGG" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MALSP" Type="int" />
-          <Property Name="TENHTGG" Type="varchar" MaxLength="20" />
-          <Property Name="GIAMGIA" Type="numeric" Precision="20" Scale="0" />
+          <Property Name="TENHTGG" Type="nvarchar" MaxLength="100" />
+          <Property Name="GIAMGIA" Type="int" />
           <Property Name="NGAYTAO" Type="datetime" />
           <Property Name="MOTA" Type="text" />
         </EntityType>
@@ -77,10 +76,10 @@
           <Key>
             <PropertyRef Name="MAHTTK" />
           </Key>
-          <Property Name="MAHTTK" Type="int" Nullable="false" />
+          <Property Name="MAHTTK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MALSP" Type="int" />
-          <Property Name="TENHTTK" Type="varchar" MaxLength="20" />
-          <Property Name="SOLUONG" Type="numeric" Precision="20" Scale="0" />
+          <Property Name="TENHTTK" Type="nvarchar" MaxLength="100" />
+          <Property Name="SOLUONG" Type="int" />
           <Property Name="NGAYTAO" Type="datetime" />
           <Property Name="MOTA" Type="text" />
         </EntityType>
@@ -88,9 +87,9 @@
           <Key>
             <PropertyRef Name="MAHTVC" />
           </Key>
-          <Property Name="MAHTVC" Type="int" Nullable="false" />
-          <Property Name="TENVC" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="TIENGIAM" Type="money" />
+          <Property Name="MAHTVC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TENVC" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="TIENGIAM" Type="int" />
           <Property Name="NGAYTAO" Type="datetime" Nullable="false" />
           <Property Name="MOTA" Type="text" Nullable="false" />
           <Property Name="TRANGTHAI" Type="bit" />
@@ -99,7 +98,7 @@
           <Key>
             <PropertyRef Name="SOHD" />
           </Key>
-          <Property Name="SOHD" Type="int" Nullable="false" />
+          <Property Name="SOHD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MADH" Type="int" Nullable="false" />
           <Property Name="NGAYTAO" Type="datetime" Nullable="false" />
         </EntityType>
@@ -107,11 +106,11 @@
           <Key>
             <PropertyRef Name="MAKH" />
           </Key>
-          <Property Name="MAKH" Type="int" Nullable="false" />
+          <Property Name="MAKH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TENKH" Type="varchar" MaxLength="50" />
           <Property Name="GIOITINH" Type="bit" />
           <Property Name="NGAYSINH" Type="datetime" />
-          <Property Name="SDT" Type="numeric" Precision="10" Scale="0" />
+          <Property Name="SDT" Type="int" />
           <Property Name="DIACHI" Type="text" />
           <Property Name="EMAIL" Type="varchar" MaxLength="20" />
           <Property Name="MALKH" Type="int" />
@@ -121,7 +120,7 @@
           <Key>
             <PropertyRef Name="MAKM" />
           </Key>
-          <Property Name="MAKM" Type="int" Nullable="false" />
+          <Property Name="MAKM" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TENKM" Type="varchar" MaxLength="50" />
           <Property Name="MALKH" Type="int" />
           <Property Name="MAHTTK" Type="int" />
@@ -136,7 +135,7 @@
           <Key>
             <PropertyRef Name="MALDV" />
           </Key>
-          <Property Name="MALDV" Type="int" Nullable="false" />
+          <Property Name="MALDV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TENLDV" Type="varchar" MaxLength="50" />
           <Property Name="NGAYTAO" Type="datetime" />
           <Property Name="TRANGTHAI" Type="bit" />
@@ -145,18 +144,17 @@
           <Key>
             <PropertyRef Name="MALKH" />
           </Key>
-          <Property Name="MALKH" Type="int" Nullable="false" />
-          <Property Name="CAP_MACD" Type="int" Nullable="false" />
+          <Property Name="MALKH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MACD" Type="int" Nullable="false" />
           <Property Name="TENLKH" Type="varchar" MaxLength="50" />
           <Property Name="NGAYTAO" Type="datetime" />
           <Property Name="MOTA" Type="text" />
-          <Property Name="MACD" Type="int" />
         </EntityType>
         <EntityType Name="LOAISANPHAM">
           <Key>
             <PropertyRef Name="MALSP" />
           </Key>
-          <Property Name="MALSP" Type="int" Nullable="false" />
+          <Property Name="MALSP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TENLSP" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="NGAYTAO" Type="datetime" Nullable="false" />
           <Property Name="TRANGTHAI" Type="bit" Nullable="false" />
@@ -165,7 +163,7 @@
           <Key>
             <PropertyRef Name="MAMUC" />
           </Key>
-          <Property Name="MAMUC" Type="int" Nullable="false" />
+          <Property Name="MAMUC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TENMUC" Type="varchar" MaxLength="20" />
           <Property Name="MOTA" Type="text" />
           <Property Name="NGAYTAO" Type="datetime" />
@@ -174,9 +172,9 @@
           <Key>
             <PropertyRef Name="MASP" />
           </Key>
-          <Property Name="MASP" Type="int" Nullable="false" />
+          <Property Name="MASP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TENSP" Type="varchar" MaxLength="50" />
-          <Property Name="SOLUONG" Type="numeric" Precision="10" Scale="0" />
+          <Property Name="SOLUONG" Type="int" />
           <Property Name="GIABAN" Type="real" />
           <Property Name="NGAYTAO" Type="datetime" />
           <Property Name="TRANGTHAI" Type="bit" />
@@ -197,26 +195,13 @@
           <Key>
             <PropertyRef Name="MATHE" />
           </Key>
-          <Property Name="MATHE" Type="int" Nullable="false" />
-          <Property Name="DIEM" Type="numeric" Precision="10" Scale="0" />
+          <Property Name="MATHE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DIEM" Type="int" />
           <Property Name="NGAYTAO" Type="datetime" Nullable="false" />
           <Property Name="NGAYSUA" Type="datetime" />
           <Property Name="TINHTRANG" Type="bit" Nullable="false" />
           <Property Name="MACD" Type="int" Nullable="false" />
-          <Property Name="MAKH" Type="int" Nullable="false" />
         </EntityType>
-        <Association Name="FK_CAPDOTHE_RELATIONS_LOAIKHAC">
-          <End Role="LOAIKHACHHANG" Type="Self.LOAIKHACHHANG" Multiplicity="1" />
-          <End Role="CAPDOTHE" Type="Self.CAPDOTHE" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="LOAIKHACHHANG">
-              <PropertyRef Name="MALKH" />
-            </Principal>
-            <Dependent Role="CAPDOTHE">
-              <PropertyRef Name="MALKH" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_CHITIETD_RELATIONS_DONHANG">
           <End Role="DONHANG" Type="Self.DONHANG" Multiplicity="0..1" />
           <End Role="CHITIETDONHANG" Type="Self.CHITIETDONHANG" Multiplicity="*" />
@@ -409,18 +394,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_KHUYENMA_RELATIONS_HINHTHUCTANGKEM">
-          <End Role="HINHTHUCTANGKEM" Type="Self.HINHTHUCTANGKEM" Multiplicity="0..1" />
-          <End Role="KHUYENMAI" Type="Self.KHUYENMAI" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="HINHTHUCTANGKEM">
-              <PropertyRef Name="MAHTTK" />
-            </Principal>
-            <Dependent Role="KHUYENMAI">
-              <PropertyRef Name="MAHTTK" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_KHUYENMA_RELATIONS_LOAIKHACHHANG">
           <End Role="LOAIKHACHHANG" Type="Self.LOAIKHACHHANG" Multiplicity="0..1" />
           <End Role="KHUYENMAI" Type="Self.KHUYENMAI" Multiplicity="*" />
@@ -433,30 +406,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_KHUYENMAI_HINHTHUCGIAMGIA">
-          <End Role="HINHTHUCGIAMGIA" Type="Self.HINHTHUCGIAMGIA" Multiplicity="0..1" />
-          <End Role="KHUYENMAI" Type="Self.KHUYENMAI" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="HINHTHUCGIAMGIA">
-              <PropertyRef Name="MAHTGG" />
-            </Principal>
-            <Dependent Role="KHUYENMAI">
-              <PropertyRef Name="MAHTGG" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_KHUYENMAI_HINHTHUCVOUCHER">
-          <End Role="HINHTHUCVOUCHER" Type="Self.HINHTHUCVOUCHER" Multiplicity="0..1" />
-          <End Role="KHUYENMAI" Type="Self.KHUYENMAI" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="HINHTHUCVOUCHER">
-              <PropertyRef Name="MAHTVC" />
-            </Principal>
-            <Dependent Role="KHUYENMAI">
-              <PropertyRef Name="MAHTVC" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_LOAIKHAC_RELATIONS_CAPDOTHE">
           <End Role="CAPDOTHE" Type="Self.CAPDOTHE" Multiplicity="1" />
           <End Role="LOAIKHACHHANG" Type="Self.LOAIKHACHHANG" Multiplicity="*" />
@@ -465,7 +414,7 @@
               <PropertyRef Name="MACD" />
             </Principal>
             <Dependent Role="LOAIKHACHHANG">
-              <PropertyRef Name="CAP_MACD" />
+              <PropertyRef Name="MACD" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -493,6 +442,42 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="KHUYENMAI_MAHTGG_FK">
+          <End Role="HINHTHUCGIAMGIA" Type="Self.HINHTHUCGIAMGIA" Multiplicity="0..1" />
+          <End Role="KHUYENMAI" Type="Self.KHUYENMAI" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HINHTHUCGIAMGIA">
+              <PropertyRef Name="MAHTGG" />
+            </Principal>
+            <Dependent Role="KHUYENMAI">
+              <PropertyRef Name="MAHTGG" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="KHUYENMAI_MAHTTK_FK">
+          <End Role="HINHTHUCTANGKEM" Type="Self.HINHTHUCTANGKEM" Multiplicity="0..1" />
+          <End Role="KHUYENMAI" Type="Self.KHUYENMAI" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HINHTHUCTANGKEM">
+              <PropertyRef Name="MAHTTK" />
+            </Principal>
+            <Dependent Role="KHUYENMAI">
+              <PropertyRef Name="MAHTTK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="KHUYENMAI_MAHTVC_FK">
+          <End Role="HINHTHUCVOUCHER" Type="Self.HINHTHUCVOUCHER" Multiplicity="0..1" />
+          <End Role="KHUYENMAI" Type="Self.KHUYENMAI" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HINHTHUCVOUCHER">
+              <PropertyRef Name="MAHTVC" />
+            </Principal>
+            <Dependent Role="KHUYENMAI">
+              <PropertyRef Name="MAHTVC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="QuanLyKhuyenMaiModelStoreContainer">
           <EntitySet Name="CAPDOTHE" EntityType="Self.CAPDOTHE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CHITIETDONHANG" EntityType="Self.CHITIETDONHANG" Schema="dbo" store:Type="Tables" />
@@ -513,10 +498,6 @@
           <EntitySet Name="SANPHAM" EntityType="Self.SANPHAM" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="THETHANHVIEN" EntityType="Self.THETHANHVIEN" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_CAPDOTHE_RELATIONS_LOAIKHAC" Association="Self.FK_CAPDOTHE_RELATIONS_LOAIKHAC">
-            <End Role="LOAIKHACHHANG" EntitySet="LOAIKHACHHANG" />
-            <End Role="CAPDOTHE" EntitySet="CAPDOTHE" />
-          </AssociationSet>
           <AssociationSet Name="FK_CHITIETD_RELATIONS_DONHANG" Association="Self.FK_CHITIETD_RELATIONS_DONHANG">
             <End Role="DONHANG" EntitySet="DONHANG" />
             <End Role="CHITIETDONHANG" EntitySet="CHITIETDONHANG" />
@@ -581,20 +562,8 @@
             <End Role="THETHANHVIEN" EntitySet="THETHANHVIEN" />
             <End Role="KHACHHANG" EntitySet="KHACHHANG" />
           </AssociationSet>
-          <AssociationSet Name="FK_KHUYENMA_RELATIONS_HINHTHUCTANGKEM" Association="Self.FK_KHUYENMA_RELATIONS_HINHTHUCTANGKEM">
-            <End Role="HINHTHUCTANGKEM" EntitySet="HINHTHUCTANGKEM" />
-            <End Role="KHUYENMAI" EntitySet="KHUYENMAI" />
-          </AssociationSet>
           <AssociationSet Name="FK_KHUYENMA_RELATIONS_LOAIKHACHHANG" Association="Self.FK_KHUYENMA_RELATIONS_LOAIKHACHHANG">
             <End Role="LOAIKHACHHANG" EntitySet="LOAIKHACHHANG" />
-            <End Role="KHUYENMAI" EntitySet="KHUYENMAI" />
-          </AssociationSet>
-          <AssociationSet Name="FK_KHUYENMAI_HINHTHUCGIAMGIA" Association="Self.FK_KHUYENMAI_HINHTHUCGIAMGIA">
-            <End Role="HINHTHUCGIAMGIA" EntitySet="HINHTHUCGIAMGIA" />
-            <End Role="KHUYENMAI" EntitySet="KHUYENMAI" />
-          </AssociationSet>
-          <AssociationSet Name="FK_KHUYENMAI_HINHTHUCVOUCHER" Association="Self.FK_KHUYENMAI_HINHTHUCVOUCHER">
-            <End Role="HINHTHUCVOUCHER" EntitySet="HINHTHUCVOUCHER" />
             <End Role="KHUYENMAI" EntitySet="KHUYENMAI" />
           </AssociationSet>
           <AssociationSet Name="FK_LOAIKHAC_RELATIONS_CAPDOTHE" Association="Self.FK_LOAIKHAC_RELATIONS_CAPDOTHE">
@@ -609,73 +578,195 @@
             <End Role="CAPDOTHE" EntitySet="CAPDOTHE" />
             <End Role="THETHANHVIEN" EntitySet="THETHANHVIEN" />
           </AssociationSet>
+          <AssociationSet Name="KHUYENMAI_MAHTGG_FK" Association="Self.KHUYENMAI_MAHTGG_FK">
+            <End Role="HINHTHUCGIAMGIA" EntitySet="HINHTHUCGIAMGIA" />
+            <End Role="KHUYENMAI" EntitySet="KHUYENMAI" />
+          </AssociationSet>
+          <AssociationSet Name="KHUYENMAI_MAHTTK_FK" Association="Self.KHUYENMAI_MAHTTK_FK">
+            <End Role="HINHTHUCTANGKEM" EntitySet="HINHTHUCTANGKEM" />
+            <End Role="KHUYENMAI" EntitySet="KHUYENMAI" />
+          </AssociationSet>
+          <AssociationSet Name="KHUYENMAI_MAHTVC_FK" Association="Self.KHUYENMAI_MAHTVC_FK">
+            <End Role="HINHTHUCVOUCHER" EntitySet="HINHTHUCVOUCHER" />
+            <End Role="KHUYENMAI" EntitySet="KHUYENMAI" />
+          </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QuanLyKhuyenMaiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="QuanLyKhuyenMaiEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CAPDOTHEs" EntityType="QuanLyKhuyenMaiModel.CAPDOTHE" />
+          <EntitySet Name="CHITIETDONHANGs" EntityType="QuanLyKhuyenMaiModel.CHITIETDONHANG" />
+          <EntitySet Name="CHITIETHOADONs" EntityType="QuanLyKhuyenMaiModel.CHITIETHOADON" />
+          <EntitySet Name="CHITIETSANPHAMTANGKEMs" EntityType="QuanLyKhuyenMaiModel.CHITIETSANPHAMTANGKEM" />
+          <EntitySet Name="DANHGIADICHVUs" EntityType="QuanLyKhuyenMaiModel.DANHGIADICHVU" />
+          <EntitySet Name="DONHANGs" EntityType="QuanLyKhuyenMaiModel.DONHANG" />
+          <EntitySet Name="HINHTHUCGIAMGIAs" EntityType="QuanLyKhuyenMaiModel.HINHTHUCGIAMGIA" />
+          <EntitySet Name="HINHTHUCTANGKEMs" EntityType="QuanLyKhuyenMaiModel.HINHTHUCTANGKEM" />
+          <EntitySet Name="HINHTHUCVOUCHERs" EntityType="QuanLyKhuyenMaiModel.HINHTHUCVOUCHER" />
+          <EntitySet Name="HOADONs" EntityType="QuanLyKhuyenMaiModel.HOADON" />
+          <EntitySet Name="KHACHHANGs" EntityType="QuanLyKhuyenMaiModel.KHACHHANG" />
+          <EntitySet Name="KHUYENMAIs" EntityType="QuanLyKhuyenMaiModel.KHUYENMAI" />
+          <EntitySet Name="LOAIDICHVUs" EntityType="QuanLyKhuyenMaiModel.LOAIDICHVU" />
+          <EntitySet Name="LOAIKHACHHANGs" EntityType="QuanLyKhuyenMaiModel.LOAIKHACHHANG" />
+          <EntitySet Name="LOAISANPHAMs" EntityType="QuanLyKhuyenMaiModel.LOAISANPHAM" />
+          <EntitySet Name="MUCDOHAILONGs" EntityType="QuanLyKhuyenMaiModel.MUCDOHAILONG" />
+          <EntitySet Name="SANPHAMs" EntityType="QuanLyKhuyenMaiModel.SANPHAM" />
+          <EntitySet Name="sysdiagrams" EntityType="QuanLyKhuyenMaiModel.sysdiagram" />
+          <EntitySet Name="THETHANHVIENs" EntityType="QuanLyKhuyenMaiModel.THETHANHVIEN" />
+          <AssociationSet Name="FK_LOAIKHAC_RELATIONS_CAPDOTHE" Association="QuanLyKhuyenMaiModel.FK_LOAIKHAC_RELATIONS_CAPDOTHE">
+            <End Role="CAPDOTHE" EntitySet="CAPDOTHEs" />
+            <End Role="LOAIKHACHHANG" EntitySet="LOAIKHACHHANGs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_THETHANH_RELATIONS_CAPDOTHE" Association="QuanLyKhuyenMaiModel.FK_THETHANH_RELATIONS_CAPDOTHE">
+            <End Role="CAPDOTHE" EntitySet="CAPDOTHEs" />
+            <End Role="THETHANHVIEN" EntitySet="THETHANHVIENs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CHITIETD_RELATIONS_DONHANG" Association="QuanLyKhuyenMaiModel.FK_CHITIETD_RELATIONS_DONHANG">
+            <End Role="DONHANG" EntitySet="DONHANGs" />
+            <End Role="CHITIETDONHANG" EntitySet="CHITIETDONHANGs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CHITIETD_RELATIONS_SANPHAM" Association="QuanLyKhuyenMaiModel.FK_CHITIETD_RELATIONS_SANPHAM">
+            <End Role="SANPHAM" EntitySet="SANPHAMs" />
+            <End Role="CHITIETDONHANG" EntitySet="CHITIETDONHANGs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CHITIETH_RELATIONS_HOADON" Association="QuanLyKhuyenMaiModel.FK_CHITIETH_RELATIONS_HOADON">
+            <End Role="HOADON" EntitySet="HOADONs" />
+            <End Role="CHITIETHOADON" EntitySet="CHITIETHOADONs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CHITIETH_RELATIONS_SANPHAM" Association="QuanLyKhuyenMaiModel.FK_CHITIETH_RELATIONS_SANPHAM">
+            <End Role="SANPHAM" EntitySet="SANPHAMs" />
+            <End Role="CHITIETHOADON" EntitySet="CHITIETHOADONs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CHITIETS_RELATIONS_DONHANG" Association="QuanLyKhuyenMaiModel.FK_CHITIETS_RELATIONS_DONHANG">
+            <End Role="DONHANG" EntitySet="DONHANGs" />
+            <End Role="CHITIETSANPHAMTANGKEM" EntitySet="CHITIETSANPHAMTANGKEMs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CHITIETS_RELATIONS_SANPHAM" Association="QuanLyKhuyenMaiModel.FK_CHITIETS_RELATIONS_SANPHAM">
+            <End Role="SANPHAM" EntitySet="SANPHAMs" />
+            <End Role="CHITIETSANPHAMTANGKEM" EntitySet="CHITIETSANPHAMTANGKEMs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DANHGIAD_RELATIONS_KHACHHAN" Association="QuanLyKhuyenMaiModel.FK_DANHGIAD_RELATIONS_KHACHHAN">
+            <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
+            <End Role="DANHGIADICHVU" EntitySet="DANHGIADICHVUs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DANHGIAD_RELATIONS_LOAIDICH" Association="QuanLyKhuyenMaiModel.FK_DANHGIAD_RELATIONS_LOAIDICH">
+            <End Role="LOAIDICHVU" EntitySet="LOAIDICHVUs" />
+            <End Role="DANHGIADICHVU" EntitySet="DANHGIADICHVUs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DANHGIAD_RELATIONS_MUCDOHAI" Association="QuanLyKhuyenMaiModel.FK_DANHGIAD_RELATIONS_MUCDOHAI">
+            <End Role="MUCDOHAILONG" EntitySet="MUCDOHAILONGs" />
+            <End Role="DANHGIADICHVU" EntitySet="DANHGIADICHVUs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DONHANG_RELATIONS_KHACHHAN" Association="QuanLyKhuyenMaiModel.FK_DONHANG_RELATIONS_KHACHHAN">
+            <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
+            <End Role="DONHANG" EntitySet="DONHANGs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DONHANG_RELATIONS_KHUYENMA" Association="QuanLyKhuyenMaiModel.FK_DONHANG_RELATIONS_KHUYENMA">
+            <End Role="KHUYENMAI" EntitySet="KHUYENMAIs" />
+            <End Role="DONHANG" EntitySet="DONHANGs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HOADON_RELATIONS_DONHANG" Association="QuanLyKhuyenMaiModel.FK_HOADON_RELATIONS_DONHANG">
+            <End Role="DONHANG" EntitySet="DONHANGs" />
+            <End Role="HOADON" EntitySet="HOADONs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HINHTHUC_RELATIONS_LOAISANP" Association="QuanLyKhuyenMaiModel.FK_HINHTHUC_RELATIONS_LOAISANP">
+            <End Role="LOAISANPHAM" EntitySet="LOAISANPHAMs" />
+            <End Role="HINHTHUCGIAMGIA" EntitySet="HINHTHUCGIAMGIAs" />
+          </AssociationSet>
+          <AssociationSet Name="KHUYENMAI_MAHTGG_FK" Association="QuanLyKhuyenMaiModel.KHUYENMAI_MAHTGG_FK">
+            <End Role="HINHTHUCGIAMGIA" EntitySet="HINHTHUCGIAMGIAs" />
+            <End Role="KHUYENMAI" EntitySet="KHUYENMAIs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HINHTHUCTANGKEM_LOAISANPHAM" Association="QuanLyKhuyenMaiModel.FK_HINHTHUCTANGKEM_LOAISANPHAM">
+            <End Role="LOAISANPHAM" EntitySet="LOAISANPHAMs" />
+            <End Role="HINHTHUCTANGKEM" EntitySet="HINHTHUCTANGKEMs" />
+          </AssociationSet>
+          <AssociationSet Name="KHUYENMAI_MAHTTK_FK" Association="QuanLyKhuyenMaiModel.KHUYENMAI_MAHTTK_FK">
+            <End Role="HINHTHUCTANGKEM" EntitySet="HINHTHUCTANGKEMs" />
+            <End Role="KHUYENMAI" EntitySet="KHUYENMAIs" />
+          </AssociationSet>
+          <AssociationSet Name="KHUYENMAI_MAHTVC_FK" Association="QuanLyKhuyenMaiModel.KHUYENMAI_MAHTVC_FK">
+            <End Role="HINHTHUCVOUCHER" EntitySet="HINHTHUCVOUCHERs" />
+            <End Role="KHUYENMAI" EntitySet="KHUYENMAIs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KHACHHAN_RELATIONS_LOAIKHAC" Association="QuanLyKhuyenMaiModel.FK_KHACHHAN_RELATIONS_LOAIKHAC">
+            <End Role="LOAIKHACHHANG" EntitySet="LOAIKHACHHANGs" />
+            <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KHACHHAN_RELATIONS_THETHANH" Association="QuanLyKhuyenMaiModel.FK_KHACHHAN_RELATIONS_THETHANH">
+            <End Role="THETHANHVIEN" EntitySet="THETHANHVIENs" />
+            <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KHUYENMA_RELATIONS_LOAIKHACHHANG" Association="QuanLyKhuyenMaiModel.FK_KHUYENMA_RELATIONS_LOAIKHACHHANG">
+            <End Role="LOAIKHACHHANG" EntitySet="LOAIKHACHHANGs" />
+            <End Role="KHUYENMAI" EntitySet="KHUYENMAIs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SANPHAM_RELATIONS_LOAISANP" Association="QuanLyKhuyenMaiModel.FK_SANPHAM_RELATIONS_LOAISANP">
+            <End Role="LOAISANPHAM" EntitySet="LOAISANPHAMs" />
+            <End Role="SANPHAM" EntitySet="SANPHAMs" />
+          </AssociationSet>
+        </EntityContainer>
         <EntityType Name="CAPDOTHE">
           <Key>
             <PropertyRef Name="MACD" />
           </Key>
-          <Property Name="MACD" Type="Int32" Nullable="false" />
-          <Property Name="MALKH" Type="Int32" Nullable="false" />
+          <Property Name="MACD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TENCD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="DIEMCD" Type="Decimal" Precision="10" Scale="0" />
           <Property Name="NGAYTAO" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="LOAIKHACHHANG" Relationship="Self.FK_CAPDOTHE_RELATIONS_LOAIKHAC" FromRole="CAPDOTHE" ToRole="LOAIKHACHHANG" />
-          <NavigationProperty Name="LOAIKHACHHANGs" Relationship="Self.FK_LOAIKHAC_RELATIONS_CAPDOTHE" FromRole="CAPDOTHE" ToRole="LOAIKHACHHANG" />
-          <NavigationProperty Name="THETHANHVIENs" Relationship="Self.FK_THETHANH_RELATIONS_CAPDOTHE" FromRole="CAPDOTHE" ToRole="THETHANHVIEN" />
+          <NavigationProperty Name="LOAIKHACHHANGs" Relationship="QuanLyKhuyenMaiModel.FK_LOAIKHAC_RELATIONS_CAPDOTHE" FromRole="CAPDOTHE" ToRole="LOAIKHACHHANG" />
+          <NavigationProperty Name="THETHANHVIENs" Relationship="QuanLyKhuyenMaiModel.FK_THETHANH_RELATIONS_CAPDOTHE" FromRole="CAPDOTHE" ToRole="THETHANHVIEN" />
         </EntityType>
         <EntityType Name="CHITIETDONHANG">
           <Key>
             <PropertyRef Name="MACTDH" />
           </Key>
-          <Property Name="MACTDH" Type="Int32" Nullable="false" />
+          <Property Name="MACTDH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MADH" Type="Int32" />
           <Property Name="MASP" Type="Int32" />
-          <NavigationProperty Name="DONHANG" Relationship="Self.FK_CHITIETD_RELATIONS_DONHANG" FromRole="CHITIETDONHANG" ToRole="DONHANG" />
-          <NavigationProperty Name="SANPHAM" Relationship="Self.FK_CHITIETD_RELATIONS_SANPHAM" FromRole="CHITIETDONHANG" ToRole="SANPHAM" />
+          <NavigationProperty Name="DONHANG" Relationship="QuanLyKhuyenMaiModel.FK_CHITIETD_RELATIONS_DONHANG" FromRole="CHITIETDONHANG" ToRole="DONHANG" />
+          <NavigationProperty Name="SANPHAM" Relationship="QuanLyKhuyenMaiModel.FK_CHITIETD_RELATIONS_SANPHAM" FromRole="CHITIETDONHANG" ToRole="SANPHAM" />
         </EntityType>
         <EntityType Name="CHITIETHOADON">
           <Key>
             <PropertyRef Name="MACTHD" />
           </Key>
-          <Property Name="MACTHD" Type="Int32" Nullable="false" />
+          <Property Name="MACTHD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="SOHD" Type="Int32" />
           <Property Name="MASP" Type="Int32" />
-          <NavigationProperty Name="HOADON" Relationship="Self.FK_CHITIETH_RELATIONS_HOADON" FromRole="CHITIETHOADON" ToRole="HOADON" />
-          <NavigationProperty Name="SANPHAM" Relationship="Self.FK_CHITIETH_RELATIONS_SANPHAM" FromRole="CHITIETHOADON" ToRole="SANPHAM" />
+          <NavigationProperty Name="HOADON" Relationship="QuanLyKhuyenMaiModel.FK_CHITIETH_RELATIONS_HOADON" FromRole="CHITIETHOADON" ToRole="HOADON" />
+          <NavigationProperty Name="SANPHAM" Relationship="QuanLyKhuyenMaiModel.FK_CHITIETH_RELATIONS_SANPHAM" FromRole="CHITIETHOADON" ToRole="SANPHAM" />
         </EntityType>
         <EntityType Name="CHITIETSANPHAMTANGKEM">
           <Key>
             <PropertyRef Name="MASPTK" />
           </Key>
-          <Property Name="MASPTK" Type="Int32" Nullable="false" />
+          <Property Name="MASPTK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MADH" Type="Int32" />
           <Property Name="MASP" Type="Int32" />
-          <NavigationProperty Name="DONHANG" Relationship="Self.FK_CHITIETS_RELATIONS_DONHANG" FromRole="CHITIETSANPHAMTANGKEM" ToRole="DONHANG" />
-          <NavigationProperty Name="SANPHAM" Relationship="Self.FK_CHITIETS_RELATIONS_SANPHAM" FromRole="CHITIETSANPHAMTANGKEM" ToRole="SANPHAM" />
+          <NavigationProperty Name="DONHANG" Relationship="QuanLyKhuyenMaiModel.FK_CHITIETS_RELATIONS_DONHANG" FromRole="CHITIETSANPHAMTANGKEM" ToRole="DONHANG" />
+          <NavigationProperty Name="SANPHAM" Relationship="QuanLyKhuyenMaiModel.FK_CHITIETS_RELATIONS_SANPHAM" FromRole="CHITIETSANPHAMTANGKEM" ToRole="SANPHAM" />
         </EntityType>
         <EntityType Name="DANHGIADICHVU">
           <Key>
             <PropertyRef Name="MADGDV" />
           </Key>
-          <Property Name="MADGDV" Type="Int32" Nullable="false" />
+          <Property Name="MADGDV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NGAYDGDV" Type="DateTime" Precision="3" />
           <Property Name="MAMUC" Type="Int32" />
           <Property Name="MAKH" Type="Int32" />
           <Property Name="MALDV" Type="Int32" />
-          <NavigationProperty Name="KHACHHANG" Relationship="Self.FK_DANHGIAD_RELATIONS_KHACHHAN" FromRole="DANHGIADICHVU" ToRole="KHACHHANG" />
-          <NavigationProperty Name="LOAIDICHVU" Relationship="Self.FK_DANHGIAD_RELATIONS_LOAIDICH" FromRole="DANHGIADICHVU" ToRole="LOAIDICHVU" />
-          <NavigationProperty Name="MUCDOHAILONG" Relationship="Self.FK_DANHGIAD_RELATIONS_MUCDOHAI" FromRole="DANHGIADICHVU" ToRole="MUCDOHAILONG" />
+          <NavigationProperty Name="KHACHHANG" Relationship="QuanLyKhuyenMaiModel.FK_DANHGIAD_RELATIONS_KHACHHAN" FromRole="DANHGIADICHVU" ToRole="KHACHHANG" />
+          <NavigationProperty Name="LOAIDICHVU" Relationship="QuanLyKhuyenMaiModel.FK_DANHGIAD_RELATIONS_LOAIDICH" FromRole="DANHGIADICHVU" ToRole="LOAIDICHVU" />
+          <NavigationProperty Name="MUCDOHAILONG" Relationship="QuanLyKhuyenMaiModel.FK_DANHGIAD_RELATIONS_MUCDOHAI" FromRole="DANHGIADICHVU" ToRole="MUCDOHAILONG" />
         </EntityType>
         <EntityType Name="DONHANG">
           <Key>
             <PropertyRef Name="MADH" />
           </Key>
-          <Property Name="MADH" Type="Int32" Nullable="false" />
+          <Property Name="MADH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NGAYTAO" Type="DateTime" Precision="3" />
           <Property Name="PHUONGTHUCTT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="COKM" Type="Boolean" />
@@ -683,83 +774,83 @@
           <Property Name="TRANGTHAI" Type="Boolean" />
           <Property Name="MAKH" Type="Int32" />
           <Property Name="MAKM" Type="Int32" />
-          <NavigationProperty Name="CHITIETDONHANGs" Relationship="Self.FK_CHITIETD_RELATIONS_DONHANG" FromRole="DONHANG" ToRole="CHITIETDONHANG" />
-          <NavigationProperty Name="CHITIETSANPHAMTANGKEMs" Relationship="Self.FK_CHITIETS_RELATIONS_DONHANG" FromRole="DONHANG" ToRole="CHITIETSANPHAMTANGKEM" />
-          <NavigationProperty Name="KHACHHANG" Relationship="Self.FK_DONHANG_RELATIONS_KHACHHAN" FromRole="DONHANG" ToRole="KHACHHANG" />
-          <NavigationProperty Name="KHUYENMAI" Relationship="Self.FK_DONHANG_RELATIONS_KHUYENMA" FromRole="DONHANG" ToRole="KHUYENMAI" />
-          <NavigationProperty Name="HOADONs" Relationship="Self.FK_HOADON_RELATIONS_DONHANG" FromRole="DONHANG" ToRole="HOADON" />
+          <NavigationProperty Name="CHITIETDONHANGs" Relationship="QuanLyKhuyenMaiModel.FK_CHITIETD_RELATIONS_DONHANG" FromRole="DONHANG" ToRole="CHITIETDONHANG" />
+          <NavigationProperty Name="CHITIETSANPHAMTANGKEMs" Relationship="QuanLyKhuyenMaiModel.FK_CHITIETS_RELATIONS_DONHANG" FromRole="DONHANG" ToRole="CHITIETSANPHAMTANGKEM" />
+          <NavigationProperty Name="KHACHHANG" Relationship="QuanLyKhuyenMaiModel.FK_DONHANG_RELATIONS_KHACHHAN" FromRole="DONHANG" ToRole="KHACHHANG" />
+          <NavigationProperty Name="KHUYENMAI" Relationship="QuanLyKhuyenMaiModel.FK_DONHANG_RELATIONS_KHUYENMA" FromRole="DONHANG" ToRole="KHUYENMAI" />
+          <NavigationProperty Name="HOADONs" Relationship="QuanLyKhuyenMaiModel.FK_HOADON_RELATIONS_DONHANG" FromRole="DONHANG" ToRole="HOADON" />
         </EntityType>
         <EntityType Name="HINHTHUCGIAMGIA">
           <Key>
             <PropertyRef Name="MAHTGG" />
           </Key>
-          <Property Name="MAHTGG" Type="Int32" Nullable="false" />
+          <Property Name="MAHTGG" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MALSP" Type="Int32" />
-          <Property Name="TENHTGG" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="GIAMGIA" Type="Decimal" Precision="20" Scale="0" />
+          <Property Name="TENHTGG" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="GIAMGIA" Type="Int32" />
           <Property Name="NGAYTAO" Type="DateTime" Precision="3" />
           <Property Name="MOTA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="LOAISANPHAM" Relationship="Self.FK_HINHTHUC_RELATIONS_LOAISANP" FromRole="HINHTHUCGIAMGIA" ToRole="LOAISANPHAM" />
-          <NavigationProperty Name="KHUYENMAIs" Relationship="Self.FK_KHUYENMAI_HINHTHUCGIAMGIA" FromRole="HINHTHUCGIAMGIA" ToRole="KHUYENMAI" />
+          <NavigationProperty Name="LOAISANPHAM" Relationship="QuanLyKhuyenMaiModel.FK_HINHTHUC_RELATIONS_LOAISANP" FromRole="HINHTHUCGIAMGIA" ToRole="LOAISANPHAM" />
+          <NavigationProperty Name="KHUYENMAIs" Relationship="QuanLyKhuyenMaiModel.KHUYENMAI_MAHTGG_FK" FromRole="HINHTHUCGIAMGIA" ToRole="KHUYENMAI" />
         </EntityType>
         <EntityType Name="HINHTHUCTANGKEM">
           <Key>
             <PropertyRef Name="MAHTTK" />
           </Key>
-          <Property Name="MAHTTK" Type="Int32" Nullable="false" />
+          <Property Name="MAHTTK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MALSP" Type="Int32" />
-          <Property Name="TENHTTK" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="SOLUONG" Type="Decimal" Precision="20" Scale="0" />
+          <Property Name="TENHTTK" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SOLUONG" Type="Int32" />
           <Property Name="NGAYTAO" Type="DateTime" Precision="3" />
           <Property Name="MOTA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="LOAISANPHAM" Relationship="Self.FK_HINHTHUCTANGKEM_LOAISANPHAM" FromRole="HINHTHUCTANGKEM" ToRole="LOAISANPHAM" />
-          <NavigationProperty Name="KHUYENMAIs" Relationship="Self.FK_KHUYENMA_RELATIONS_HINHTHUCTANGKEM" FromRole="HINHTHUCTANGKEM" ToRole="KHUYENMAI" />
+          <NavigationProperty Name="LOAISANPHAM" Relationship="QuanLyKhuyenMaiModel.FK_HINHTHUCTANGKEM_LOAISANPHAM" FromRole="HINHTHUCTANGKEM" ToRole="LOAISANPHAM" />
+          <NavigationProperty Name="KHUYENMAIs" Relationship="QuanLyKhuyenMaiModel.KHUYENMAI_MAHTTK_FK" FromRole="HINHTHUCTANGKEM" ToRole="KHUYENMAI" />
         </EntityType>
         <EntityType Name="HINHTHUCVOUCHER">
           <Key>
             <PropertyRef Name="MAHTVC" />
           </Key>
-          <Property Name="MAHTVC" Type="Int32" Nullable="false" />
-          <Property Name="TENVC" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="TIENGIAM" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MAHTVC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TENVC" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TIENGIAM" Type="Int32" />
           <Property Name="NGAYTAO" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="MOTA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MOTA" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="TRANGTHAI" Type="Boolean" />
-          <NavigationProperty Name="KHUYENMAIs" Relationship="Self.FK_KHUYENMAI_HINHTHUCVOUCHER" FromRole="HINHTHUCVOUCHER" ToRole="KHUYENMAI" />
+          <NavigationProperty Name="KHUYENMAIs" Relationship="QuanLyKhuyenMaiModel.KHUYENMAI_MAHTVC_FK" FromRole="HINHTHUCVOUCHER" ToRole="KHUYENMAI" />
         </EntityType>
         <EntityType Name="HOADON">
           <Key>
             <PropertyRef Name="SOHD" />
           </Key>
-          <Property Name="SOHD" Type="Int32" Nullable="false" />
+          <Property Name="SOHD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MADH" Type="Int32" Nullable="false" />
           <Property Name="NGAYTAO" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="CHITIETHOADONs" Relationship="Self.FK_CHITIETH_RELATIONS_HOADON" FromRole="HOADON" ToRole="CHITIETHOADON" />
-          <NavigationProperty Name="DONHANG" Relationship="Self.FK_HOADON_RELATIONS_DONHANG" FromRole="HOADON" ToRole="DONHANG" />
+          <NavigationProperty Name="CHITIETHOADONs" Relationship="QuanLyKhuyenMaiModel.FK_CHITIETH_RELATIONS_HOADON" FromRole="HOADON" ToRole="CHITIETHOADON" />
+          <NavigationProperty Name="DONHANG" Relationship="QuanLyKhuyenMaiModel.FK_HOADON_RELATIONS_DONHANG" FromRole="HOADON" ToRole="DONHANG" />
         </EntityType>
         <EntityType Name="KHACHHANG">
           <Key>
             <PropertyRef Name="MAKH" />
           </Key>
-          <Property Name="MAKH" Type="Int32" Nullable="false" />
+          <Property Name="MAKH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TENKH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="GIOITINH" Type="Boolean" />
           <Property Name="NGAYSINH" Type="DateTime" Precision="3" />
-          <Property Name="SDT" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="SDT" Type="Int32" />
           <Property Name="DIACHI" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="EMAIL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="MALKH" Type="Int32" />
           <Property Name="MATHE" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="DANHGIADICHVUs" Relationship="Self.FK_DANHGIAD_RELATIONS_KHACHHAN" FromRole="KHACHHANG" ToRole="DANHGIADICHVU" />
-          <NavigationProperty Name="DONHANGs" Relationship="Self.FK_DONHANG_RELATIONS_KHACHHAN" FromRole="KHACHHANG" ToRole="DONHANG" />
-          <NavigationProperty Name="LOAIKHACHHANG" Relationship="Self.FK_KHACHHAN_RELATIONS_LOAIKHAC" FromRole="KHACHHANG" ToRole="LOAIKHACHHANG" />
-          <NavigationProperty Name="THETHANHVIEN" Relationship="Self.FK_KHACHHAN_RELATIONS_THETHANH" FromRole="KHACHHANG" ToRole="THETHANHVIEN" />
+          <NavigationProperty Name="DANHGIADICHVUs" Relationship="QuanLyKhuyenMaiModel.FK_DANHGIAD_RELATIONS_KHACHHAN" FromRole="KHACHHANG" ToRole="DANHGIADICHVU" />
+          <NavigationProperty Name="DONHANGs" Relationship="QuanLyKhuyenMaiModel.FK_DONHANG_RELATIONS_KHACHHAN" FromRole="KHACHHANG" ToRole="DONHANG" />
+          <NavigationProperty Name="LOAIKHACHHANG" Relationship="QuanLyKhuyenMaiModel.FK_KHACHHAN_RELATIONS_LOAIKHAC" FromRole="KHACHHANG" ToRole="LOAIKHACHHANG" />
+          <NavigationProperty Name="THETHANHVIEN" Relationship="QuanLyKhuyenMaiModel.FK_KHACHHAN_RELATIONS_THETHANH" FromRole="KHACHHANG" ToRole="THETHANHVIEN" />
         </EntityType>
         <EntityType Name="KHUYENMAI">
           <Key>
             <PropertyRef Name="MAKM" />
           </Key>
-          <Property Name="MAKM" Type="Int32" Nullable="false" />
+          <Property Name="MAKM" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TENKM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="MALKH" Type="Int32" />
           <Property Name="MAHTTK" Type="Int32" />
@@ -769,81 +860,79 @@
           <Property Name="NGAYKETTHUC" Type="DateTime" Precision="3" />
           <Property Name="MOTA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="TRANGTHAI" Type="Boolean" />
-          <NavigationProperty Name="DONHANGs" Relationship="Self.FK_DONHANG_RELATIONS_KHUYENMA" FromRole="KHUYENMAI" ToRole="DONHANG" />
-          <NavigationProperty Name="HINHTHUCGIAMGIA" Relationship="Self.FK_KHUYENMAI_HINHTHUCGIAMGIA" FromRole="KHUYENMAI" ToRole="HINHTHUCGIAMGIA" />
-          <NavigationProperty Name="HINHTHUCTANGKEM" Relationship="Self.FK_KHUYENMA_RELATIONS_HINHTHUCTANGKEM" FromRole="KHUYENMAI" ToRole="HINHTHUCTANGKEM" />
-          <NavigationProperty Name="HINHTHUCVOUCHER" Relationship="Self.FK_KHUYENMAI_HINHTHUCVOUCHER" FromRole="KHUYENMAI" ToRole="HINHTHUCVOUCHER" />
-          <NavigationProperty Name="LOAIKHACHHANG" Relationship="Self.FK_KHUYENMA_RELATIONS_LOAIKHACHHANG" FromRole="KHUYENMAI" ToRole="LOAIKHACHHANG" />
+          <NavigationProperty Name="DONHANGs" Relationship="QuanLyKhuyenMaiModel.FK_DONHANG_RELATIONS_KHUYENMA" FromRole="KHUYENMAI" ToRole="DONHANG" />
+          <NavigationProperty Name="HINHTHUCGIAMGIA" Relationship="QuanLyKhuyenMaiModel.KHUYENMAI_MAHTGG_FK" FromRole="KHUYENMAI" ToRole="HINHTHUCGIAMGIA" />
+          <NavigationProperty Name="HINHTHUCTANGKEM" Relationship="QuanLyKhuyenMaiModel.KHUYENMAI_MAHTTK_FK" FromRole="KHUYENMAI" ToRole="HINHTHUCTANGKEM" />
+          <NavigationProperty Name="HINHTHUCVOUCHER" Relationship="QuanLyKhuyenMaiModel.KHUYENMAI_MAHTVC_FK" FromRole="KHUYENMAI" ToRole="HINHTHUCVOUCHER" />
+          <NavigationProperty Name="LOAIKHACHHANG" Relationship="QuanLyKhuyenMaiModel.FK_KHUYENMA_RELATIONS_LOAIKHACHHANG" FromRole="KHUYENMAI" ToRole="LOAIKHACHHANG" />
         </EntityType>
         <EntityType Name="LOAIDICHVU">
           <Key>
             <PropertyRef Name="MALDV" />
           </Key>
-          <Property Name="MALDV" Type="Int32" Nullable="false" />
+          <Property Name="MALDV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TENLDV" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="NGAYTAO" Type="DateTime" Precision="3" />
           <Property Name="TRANGTHAI" Type="Boolean" />
-          <NavigationProperty Name="DANHGIADICHVUs" Relationship="Self.FK_DANHGIAD_RELATIONS_LOAIDICH" FromRole="LOAIDICHVU" ToRole="DANHGIADICHVU" />
+          <NavigationProperty Name="DANHGIADICHVUs" Relationship="QuanLyKhuyenMaiModel.FK_DANHGIAD_RELATIONS_LOAIDICH" FromRole="LOAIDICHVU" ToRole="DANHGIADICHVU" />
         </EntityType>
         <EntityType Name="LOAIKHACHHANG">
           <Key>
             <PropertyRef Name="MALKH" />
           </Key>
-          <Property Name="MALKH" Type="Int32" Nullable="false" />
-          <Property Name="CAP_MACD" Type="Int32" Nullable="false" />
+          <Property Name="MALKH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MACD" Type="Int32" Nullable="false" />
           <Property Name="TENLKH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="NGAYTAO" Type="DateTime" Precision="3" />
           <Property Name="MOTA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="MACD" Type="Int32" />
-          <NavigationProperty Name="CAPDOTHEs" Relationship="Self.FK_CAPDOTHE_RELATIONS_LOAIKHAC" FromRole="LOAIKHACHHANG" ToRole="CAPDOTHE" />
-          <NavigationProperty Name="CAPDOTHE" Relationship="Self.FK_LOAIKHAC_RELATIONS_CAPDOTHE" FromRole="LOAIKHACHHANG" ToRole="CAPDOTHE" />
-          <NavigationProperty Name="KHACHHANGs" Relationship="Self.FK_KHACHHAN_RELATIONS_LOAIKHAC" FromRole="LOAIKHACHHANG" ToRole="KHACHHANG" />
-          <NavigationProperty Name="KHUYENMAIs" Relationship="Self.FK_KHUYENMA_RELATIONS_LOAIKHACHHANG" FromRole="LOAIKHACHHANG" ToRole="KHUYENMAI" />
+          <NavigationProperty Name="CAPDOTHE" Relationship="QuanLyKhuyenMaiModel.FK_LOAIKHAC_RELATIONS_CAPDOTHE" FromRole="LOAIKHACHHANG" ToRole="CAPDOTHE" />
+          <NavigationProperty Name="KHACHHANGs" Relationship="QuanLyKhuyenMaiModel.FK_KHACHHAN_RELATIONS_LOAIKHAC" FromRole="LOAIKHACHHANG" ToRole="KHACHHANG" />
+          <NavigationProperty Name="KHUYENMAIs" Relationship="QuanLyKhuyenMaiModel.FK_KHUYENMA_RELATIONS_LOAIKHACHHANG" FromRole="LOAIKHACHHANG" ToRole="KHUYENMAI" />
         </EntityType>
         <EntityType Name="LOAISANPHAM">
           <Key>
             <PropertyRef Name="MALSP" />
           </Key>
-          <Property Name="MALSP" Type="Int32" Nullable="false" />
-          <Property Name="TENLSP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MALSP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TENLSP" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="NGAYTAO" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="TRANGTHAI" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="HINHTHUCGIAMGIAs" Relationship="Self.FK_HINHTHUC_RELATIONS_LOAISANP" FromRole="LOAISANPHAM" ToRole="HINHTHUCGIAMGIA" />
-          <NavigationProperty Name="HINHTHUCTANGKEMs" Relationship="Self.FK_HINHTHUCTANGKEM_LOAISANPHAM" FromRole="LOAISANPHAM" ToRole="HINHTHUCTANGKEM" />
-          <NavigationProperty Name="SANPHAMs" Relationship="Self.FK_SANPHAM_RELATIONS_LOAISANP" FromRole="LOAISANPHAM" ToRole="SANPHAM" />
+          <NavigationProperty Name="HINHTHUCGIAMGIAs" Relationship="QuanLyKhuyenMaiModel.FK_HINHTHUC_RELATIONS_LOAISANP" FromRole="LOAISANPHAM" ToRole="HINHTHUCGIAMGIA" />
+          <NavigationProperty Name="HINHTHUCTANGKEMs" Relationship="QuanLyKhuyenMaiModel.FK_HINHTHUCTANGKEM_LOAISANPHAM" FromRole="LOAISANPHAM" ToRole="HINHTHUCTANGKEM" />
+          <NavigationProperty Name="SANPHAMs" Relationship="QuanLyKhuyenMaiModel.FK_SANPHAM_RELATIONS_LOAISANP" FromRole="LOAISANPHAM" ToRole="SANPHAM" />
         </EntityType>
         <EntityType Name="MUCDOHAILONG">
           <Key>
             <PropertyRef Name="MAMUC" />
           </Key>
-          <Property Name="MAMUC" Type="Int32" Nullable="false" />
+          <Property Name="MAMUC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TENMUC" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="MOTA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="NGAYTAO" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="DANHGIADICHVUs" Relationship="Self.FK_DANHGIAD_RELATIONS_MUCDOHAI" FromRole="MUCDOHAILONG" ToRole="DANHGIADICHVU" />
+          <NavigationProperty Name="DANHGIADICHVUs" Relationship="QuanLyKhuyenMaiModel.FK_DANHGIAD_RELATIONS_MUCDOHAI" FromRole="MUCDOHAILONG" ToRole="DANHGIADICHVU" />
         </EntityType>
         <EntityType Name="SANPHAM">
           <Key>
             <PropertyRef Name="MASP" />
           </Key>
-          <Property Name="MASP" Type="Int32" Nullable="false" />
+          <Property Name="MASP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TENSP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="SOLUONG" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="SOLUONG" Type="Int32" />
           <Property Name="GIABAN" Type="Single" />
           <Property Name="NGAYTAO" Type="DateTime" Precision="3" />
           <Property Name="TRANGTHAI" Type="Boolean" />
           <Property Name="MOTA" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="MALSP" Type="Int32" />
-          <NavigationProperty Name="CHITIETDONHANGs" Relationship="Self.FK_CHITIETD_RELATIONS_SANPHAM" FromRole="SANPHAM" ToRole="CHITIETDONHANG" />
-          <NavigationProperty Name="CHITIETHOADONs" Relationship="Self.FK_CHITIETH_RELATIONS_SANPHAM" FromRole="SANPHAM" ToRole="CHITIETHOADON" />
-          <NavigationProperty Name="CHITIETSANPHAMTANGKEMs" Relationship="Self.FK_CHITIETS_RELATIONS_SANPHAM" FromRole="SANPHAM" ToRole="CHITIETSANPHAMTANGKEM" />
-          <NavigationProperty Name="LOAISANPHAM" Relationship="Self.FK_SANPHAM_RELATIONS_LOAISANP" FromRole="SANPHAM" ToRole="LOAISANPHAM" />
+          <NavigationProperty Name="CHITIETDONHANGs" Relationship="QuanLyKhuyenMaiModel.FK_CHITIETD_RELATIONS_SANPHAM" FromRole="SANPHAM" ToRole="CHITIETDONHANG" />
+          <NavigationProperty Name="CHITIETHOADONs" Relationship="QuanLyKhuyenMaiModel.FK_CHITIETH_RELATIONS_SANPHAM" FromRole="SANPHAM" ToRole="CHITIETHOADON" />
+          <NavigationProperty Name="CHITIETSANPHAMTANGKEMs" Relationship="QuanLyKhuyenMaiModel.FK_CHITIETS_RELATIONS_SANPHAM" FromRole="SANPHAM" ToRole="CHITIETSANPHAMTANGKEM" />
+          <NavigationProperty Name="LOAISANPHAM" Relationship="QuanLyKhuyenMaiModel.FK_SANPHAM_RELATIONS_LOAISANP" FromRole="SANPHAM" ToRole="LOAISANPHAM" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
             <PropertyRef Name="diagram_id" />
           </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
           <Property Name="principal_id" Type="Int32" Nullable="false" />
           <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="version" Type="Int32" />
@@ -853,43 +942,30 @@
           <Key>
             <PropertyRef Name="MATHE" />
           </Key>
-          <Property Name="MATHE" Type="Int32" Nullable="false" />
-          <Property Name="DIEM" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="MATHE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DIEM" Type="Int32" />
           <Property Name="NGAYTAO" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="NGAYSUA" Type="DateTime" Precision="3" />
           <Property Name="TINHTRANG" Type="Boolean" Nullable="false" />
           <Property Name="MACD" Type="Int32" Nullable="false" />
-          <Property Name="MAKH" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="CAPDOTHE" Relationship="Self.FK_THETHANH_RELATIONS_CAPDOTHE" FromRole="THETHANHVIEN" ToRole="CAPDOTHE" />
-          <NavigationProperty Name="KHACHHANGs" Relationship="Self.FK_KHACHHAN_RELATIONS_THETHANH" FromRole="THETHANHVIEN" ToRole="KHACHHANG" />
+          <NavigationProperty Name="CAPDOTHE" Relationship="QuanLyKhuyenMaiModel.FK_THETHANH_RELATIONS_CAPDOTHE" FromRole="THETHANHVIEN" ToRole="CAPDOTHE" />
+          <NavigationProperty Name="KHACHHANGs" Relationship="QuanLyKhuyenMaiModel.FK_KHACHHAN_RELATIONS_THETHANH" FromRole="THETHANHVIEN" ToRole="KHACHHANG" />
         </EntityType>
-        <Association Name="FK_CAPDOTHE_RELATIONS_LOAIKHAC">
-          <End Role="LOAIKHACHHANG" Type="Self.LOAIKHACHHANG" Multiplicity="1" />
-          <End Role="CAPDOTHE" Type="Self.CAPDOTHE" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="LOAIKHACHHANG">
-              <PropertyRef Name="MALKH" />
-            </Principal>
-            <Dependent Role="CAPDOTHE">
-              <PropertyRef Name="MALKH" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_LOAIKHAC_RELATIONS_CAPDOTHE">
-          <End Role="CAPDOTHE" Type="Self.CAPDOTHE" Multiplicity="1" />
-          <End Role="LOAIKHACHHANG" Type="Self.LOAIKHACHHANG" Multiplicity="*" />
+          <End Type="QuanLyKhuyenMaiModel.CAPDOTHE" Role="CAPDOTHE" Multiplicity="1" />
+          <End Type="QuanLyKhuyenMaiModel.LOAIKHACHHANG" Role="LOAIKHACHHANG" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CAPDOTHE">
               <PropertyRef Name="MACD" />
             </Principal>
             <Dependent Role="LOAIKHACHHANG">
-              <PropertyRef Name="CAP_MACD" />
+              <PropertyRef Name="MACD" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_THETHANH_RELATIONS_CAPDOTHE">
-          <End Role="CAPDOTHE" Type="Self.CAPDOTHE" Multiplicity="1" />
-          <End Role="THETHANHVIEN" Type="Self.THETHANHVIEN" Multiplicity="*" />
+          <End Type="QuanLyKhuyenMaiModel.CAPDOTHE" Role="CAPDOTHE" Multiplicity="1" />
+          <End Type="QuanLyKhuyenMaiModel.THETHANHVIEN" Role="THETHANHVIEN" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="CAPDOTHE">
               <PropertyRef Name="MACD" />
@@ -900,8 +976,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CHITIETD_RELATIONS_DONHANG">
-          <End Role="DONHANG" Type="Self.DONHANG" Multiplicity="0..1" />
-          <End Role="CHITIETDONHANG" Type="Self.CHITIETDONHANG" Multiplicity="*" />
+          <End Type="QuanLyKhuyenMaiModel.DONHANG" Role="DONHANG" Multiplicity="0..1" />
+          <End Type="QuanLyKhuyenMaiModel.CHITIETDONHANG" Role="CHITIETDONHANG" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="DONHANG">
               <PropertyRef Name="MADH" />
@@ -912,8 +988,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CHITIETD_RELATIONS_SANPHAM">
-          <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="0..1" />
-          <End Role="CHITIETDONHANG" Type="Self.CHITIETDONHANG" Multiplicity="*" />
+          <End Type="QuanLyKhuyenMaiModel.SANPHAM" Role="SANPHAM" Multiplicity="0..1" />
+          <End Type="QuanLyKhuyenMaiModel.CHITIETDONHANG" Role="CHITIETDONHANG" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="SANPHAM">
               <PropertyRef Name="MASP" />
@@ -924,8 +1000,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CHITIETH_RELATIONS_HOADON">
-          <End Role="HOADON" Type="Self.HOADON" Multiplicity="0..1" />
-          <End Role="CHITIETHOADON" Type="Self.CHITIETHOADON" Multiplicity="*" />
+          <End Type="QuanLyKhuyenMaiModel.HOADON" Role="HOADON" Multiplicity="0..1" />
+          <End Type="QuanLyKhuyenMaiModel.CHITIETHOADON" Role="CHITIETHOADON" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HOADON">
               <PropertyRef Name="SOHD" />
@@ -936,8 +1012,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CHITIETH_RELATIONS_SANPHAM">
-          <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="0..1" />
-          <End Role="CHITIETHOADON" Type="Self.CHITIETHOADON" Multiplicity="*" />
+          <End Type="QuanLyKhuyenMaiModel.SANPHAM" Role="SANPHAM" Multiplicity="0..1" />
+          <End Type="QuanLyKhuyenMaiModel.CHITIETHOADON" Role="CHITIETHOADON" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="SANPHAM">
               <PropertyRef Name="MASP" />
@@ -948,8 +1024,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CHITIETS_RELATIONS_DONHANG">
-          <End Role="DONHANG" Type="Self.DONHANG" Multiplicity="0..1" />
-          <End Role="CHITIETSANPHAMTANGKEM" Type="Self.CHITIETSANPHAMTANGKEM" Multiplicity="*" />
+          <End Type="QuanLyKhuyenMaiModel.DONHANG" Role="DONHANG" Multiplicity="0..1" />
+          <End Type="QuanLyKhuyenMaiModel.CHITIETSANPHAMTANGKEM" Role="CHITIETSANPHAMTANGKEM" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="DONHANG">
               <PropertyRef Name="MADH" />
@@ -960,8 +1036,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CHITIETS_RELATIONS_SANPHAM">
-          <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="0..1" />
-          <End Role="CHITIETSANPHAMTANGKEM" Type="Self.CHITIETSANPHAMTANGKEM" Multiplicity="*" />
+          <End Type="QuanLyKhuyenMaiModel.SANPHAM" Role="SANPHAM" Multiplicity="0..1" />
+          <End Type="QuanLyKhuyenMaiModel.CHITIETSANPHAMTANGKEM" Role="CHITIETSANPHAMTANGKEM" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="SANPHAM">
               <PropertyRef Name="MASP" />
@@ -972,8 +1048,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_DANHGIAD_RELATIONS_KHACHHAN">
-          <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="0..1" />
-          <End Role="DANHGIADICHVU" Type="Self.DANHGIADICHVU" Multiplicity="*" />
+          <End Type="QuanLyKhuyenMaiModel.KHACHHANG" Role="KHACHHANG" Multiplicity="0..1" />
+          <End Type="QuanLyKhuyenMaiModel.DANHGIADICHVU" Role="DANHGIADICHVU" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="KHACHHANG">
               <PropertyRef Name="MAKH" />
@@ -984,8 +1060,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_DANHGIAD_RELATIONS_LOAIDICH">
-          <End Role="LOAIDICHVU" Type="Self.LOAIDICHVU" Multiplicity="0..1" />
-          <End Role="DANHGIADICHVU" Type="Self.DANHGIADICHVU" Multiplicity="*" />
+          <End Type="QuanLyKhuyenMaiModel.LOAIDICHVU" Role="LOAIDICHVU" Multiplicity="0..1" />
+          <End Type="QuanLyKhuyenMaiModel.DANHGIADICHVU" Role="DANHGIADICHVU" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="LOAIDICHVU">
               <PropertyRef Name="MALDV" />
@@ -996,8 +1072,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_DANHGIAD_RELATIONS_MUCDOHAI">
-          <End Role="MUCDOHAILONG" Type="Self.MUCDOHAILONG" Multiplicity="0..1" />
-          <End Role="DANHGIADICHVU" Type="Self.DANHGIADICHVU" Multiplicity="*" />
+          <End Type="QuanLyKhuyenMaiModel.MUCDOHAILONG" Role="MUCDOHAILONG" Multiplicity="0..1" />
+          <End Type="QuanLyKhuyenMaiModel.DANHGIADICHVU" Role="DANHGIADICHVU" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="MUCDOHAILONG">
               <PropertyRef Name="MAMUC" />
@@ -1008,8 +1084,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_DONHANG_RELATIONS_KHACHHAN">
-          <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="0..1" />
-          <End Role="DONHANG" Type="Self.DONHANG" Multiplicity="*" />
+          <End Type="QuanLyKhuyenMaiModel.KHACHHANG" Role="KHACHHANG" Multiplicity="0..1" />
+          <End Type="QuanLyKhuyenMaiModel.DONHANG" Role="DONHANG" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="KHACHHANG">
               <PropertyRef Name="MAKH" />
@@ -1020,8 +1096,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_DONHANG_RELATIONS_KHUYENMA">
-          <End Role="KHUYENMAI" Type="Self.KHUYENMAI" Multiplicity="0..1" />
-          <End Role="DONHANG" Type="Self.DONHANG" Multiplicity="*" />
+          <End Type="QuanLyKhuyenMaiModel.KHUYENMAI" Role="KHUYENMAI" Multiplicity="0..1" />
+          <End Type="QuanLyKhuyenMaiModel.DONHANG" Role="DONHANG" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="KHUYENMAI">
               <PropertyRef Name="MAKM" />
@@ -1032,8 +1108,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_HOADON_RELATIONS_DONHANG">
-          <End Role="DONHANG" Type="Self.DONHANG" Multiplicity="1" />
-          <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
+          <End Type="QuanLyKhuyenMaiModel.DONHANG" Role="DONHANG" Multiplicity="1" />
+          <End Type="QuanLyKhuyenMaiModel.HOADON" Role="HOADON" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="DONHANG">
               <PropertyRef Name="MADH" />
@@ -1044,8 +1120,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_HINHTHUC_RELATIONS_LOAISANP">
-          <End Role="LOAISANPHAM" Type="Self.LOAISANPHAM" Multiplicity="0..1" />
-          <End Role="HINHTHUCGIAMGIA" Type="Self.HINHTHUCGIAMGIA" Multiplicity="*" />
+          <End Type="QuanLyKhuyenMaiModel.LOAISANPHAM" Role="LOAISANPHAM" Multiplicity="0..1" />
+          <End Type="QuanLyKhuyenMaiModel.HINHTHUCGIAMGIA" Role="HINHTHUCGIAMGIA" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="LOAISANPHAM">
               <PropertyRef Name="MALSP" />
@@ -1055,9 +1131,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_KHUYENMAI_HINHTHUCGIAMGIA">
-          <End Role="HINHTHUCGIAMGIA" Type="Self.HINHTHUCGIAMGIA" Multiplicity="0..1" />
-          <End Role="KHUYENMAI" Type="Self.KHUYENMAI" Multiplicity="*" />
+        <Association Name="KHUYENMAI_MAHTGG_FK">
+          <End Type="QuanLyKhuyenMaiModel.HINHTHUCGIAMGIA" Role="HINHTHUCGIAMGIA" Multiplicity="0..1" />
+          <End Type="QuanLyKhuyenMaiModel.KHUYENMAI" Role="KHUYENMAI" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HINHTHUCGIAMGIA">
               <PropertyRef Name="MAHTGG" />
@@ -1068,8 +1144,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_HINHTHUCTANGKEM_LOAISANPHAM">
-          <End Role="LOAISANPHAM" Type="Self.LOAISANPHAM" Multiplicity="0..1" />
-          <End Role="HINHTHUCTANGKEM" Type="Self.HINHTHUCTANGKEM" Multiplicity="*" />
+          <End Type="QuanLyKhuyenMaiModel.LOAISANPHAM" Role="LOAISANPHAM" Multiplicity="0..1" />
+          <End Type="QuanLyKhuyenMaiModel.HINHTHUCTANGKEM" Role="HINHTHUCTANGKEM" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="LOAISANPHAM">
               <PropertyRef Name="MALSP" />
@@ -1079,9 +1155,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_KHUYENMA_RELATIONS_HINHTHUCTANGKEM">
-          <End Role="HINHTHUCTANGKEM" Type="Self.HINHTHUCTANGKEM" Multiplicity="0..1" />
-          <End Role="KHUYENMAI" Type="Self.KHUYENMAI" Multiplicity="*" />
+        <Association Name="KHUYENMAI_MAHTTK_FK">
+          <End Type="QuanLyKhuyenMaiModel.HINHTHUCTANGKEM" Role="HINHTHUCTANGKEM" Multiplicity="0..1" />
+          <End Type="QuanLyKhuyenMaiModel.KHUYENMAI" Role="KHUYENMAI" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HINHTHUCTANGKEM">
               <PropertyRef Name="MAHTTK" />
@@ -1091,9 +1167,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_KHUYENMAI_HINHTHUCVOUCHER">
-          <End Role="HINHTHUCVOUCHER" Type="Self.HINHTHUCVOUCHER" Multiplicity="0..1" />
-          <End Role="KHUYENMAI" Type="Self.KHUYENMAI" Multiplicity="*" />
+        <Association Name="KHUYENMAI_MAHTVC_FK">
+          <End Type="QuanLyKhuyenMaiModel.HINHTHUCVOUCHER" Role="HINHTHUCVOUCHER" Multiplicity="0..1" />
+          <End Type="QuanLyKhuyenMaiModel.KHUYENMAI" Role="KHUYENMAI" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HINHTHUCVOUCHER">
               <PropertyRef Name="MAHTVC" />
@@ -1104,8 +1180,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_KHACHHAN_RELATIONS_LOAIKHAC">
-          <End Role="LOAIKHACHHANG" Type="Self.LOAIKHACHHANG" Multiplicity="0..1" />
-          <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="*" />
+          <End Type="QuanLyKhuyenMaiModel.LOAIKHACHHANG" Role="LOAIKHACHHANG" Multiplicity="0..1" />
+          <End Type="QuanLyKhuyenMaiModel.KHACHHANG" Role="KHACHHANG" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="LOAIKHACHHANG">
               <PropertyRef Name="MALKH" />
@@ -1116,8 +1192,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_KHACHHAN_RELATIONS_THETHANH">
-          <End Role="THETHANHVIEN" Type="Self.THETHANHVIEN" Multiplicity="1" />
-          <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="*" />
+          <End Type="QuanLyKhuyenMaiModel.THETHANHVIEN" Role="THETHANHVIEN" Multiplicity="1" />
+          <End Type="QuanLyKhuyenMaiModel.KHACHHANG" Role="KHACHHANG" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="THETHANHVIEN">
               <PropertyRef Name="MATHE" />
@@ -1128,8 +1204,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_KHUYENMA_RELATIONS_LOAIKHACHHANG">
-          <End Role="LOAIKHACHHANG" Type="Self.LOAIKHACHHANG" Multiplicity="0..1" />
-          <End Role="KHUYENMAI" Type="Self.KHUYENMAI" Multiplicity="*" />
+          <End Type="QuanLyKhuyenMaiModel.LOAIKHACHHANG" Role="LOAIKHACHHANG" Multiplicity="0..1" />
+          <End Type="QuanLyKhuyenMaiModel.KHUYENMAI" Role="KHUYENMAI" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="LOAIKHACHHANG">
               <PropertyRef Name="MALKH" />
@@ -1140,8 +1216,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_SANPHAM_RELATIONS_LOAISANP">
-          <End Role="LOAISANPHAM" Type="Self.LOAISANPHAM" Multiplicity="0..1" />
-          <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="*" />
+          <End Type="QuanLyKhuyenMaiModel.LOAISANPHAM" Role="LOAISANPHAM" Multiplicity="0..1" />
+          <End Type="QuanLyKhuyenMaiModel.SANPHAM" Role="SANPHAM" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="LOAISANPHAM">
               <PropertyRef Name="MALSP" />
@@ -1151,123 +1227,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="QuanLyKhuyenMaiEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="CAPDOTHEs" EntityType="Self.CAPDOTHE" />
-          <EntitySet Name="CHITIETDONHANGs" EntityType="Self.CHITIETDONHANG" />
-          <EntitySet Name="CHITIETHOADONs" EntityType="Self.CHITIETHOADON" />
-          <EntitySet Name="CHITIETSANPHAMTANGKEMs" EntityType="Self.CHITIETSANPHAMTANGKEM" />
-          <EntitySet Name="DANHGIADICHVUs" EntityType="Self.DANHGIADICHVU" />
-          <EntitySet Name="DONHANGs" EntityType="Self.DONHANG" />
-          <EntitySet Name="HINHTHUCGIAMGIAs" EntityType="Self.HINHTHUCGIAMGIA" />
-          <EntitySet Name="HINHTHUCTANGKEMs" EntityType="Self.HINHTHUCTANGKEM" />
-          <EntitySet Name="HINHTHUCVOUCHERs" EntityType="Self.HINHTHUCVOUCHER" />
-          <EntitySet Name="HOADONs" EntityType="Self.HOADON" />
-          <EntitySet Name="KHACHHANGs" EntityType="Self.KHACHHANG" />
-          <EntitySet Name="KHUYENMAIs" EntityType="Self.KHUYENMAI" />
-          <EntitySet Name="LOAIDICHVUs" EntityType="Self.LOAIDICHVU" />
-          <EntitySet Name="LOAIKHACHHANGs" EntityType="Self.LOAIKHACHHANG" />
-          <EntitySet Name="LOAISANPHAMs" EntityType="Self.LOAISANPHAM" />
-          <EntitySet Name="MUCDOHAILONGs" EntityType="Self.MUCDOHAILONG" />
-          <EntitySet Name="SANPHAMs" EntityType="Self.SANPHAM" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
-          <EntitySet Name="THETHANHVIENs" EntityType="Self.THETHANHVIEN" />
-          <AssociationSet Name="FK_CAPDOTHE_RELATIONS_LOAIKHAC" Association="Self.FK_CAPDOTHE_RELATIONS_LOAIKHAC">
-            <End Role="LOAIKHACHHANG" EntitySet="LOAIKHACHHANGs" />
-            <End Role="CAPDOTHE" EntitySet="CAPDOTHEs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_LOAIKHAC_RELATIONS_CAPDOTHE" Association="Self.FK_LOAIKHAC_RELATIONS_CAPDOTHE">
-            <End Role="CAPDOTHE" EntitySet="CAPDOTHEs" />
-            <End Role="LOAIKHACHHANG" EntitySet="LOAIKHACHHANGs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_THETHANH_RELATIONS_CAPDOTHE" Association="Self.FK_THETHANH_RELATIONS_CAPDOTHE">
-            <End Role="CAPDOTHE" EntitySet="CAPDOTHEs" />
-            <End Role="THETHANHVIEN" EntitySet="THETHANHVIENs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CHITIETD_RELATIONS_DONHANG" Association="Self.FK_CHITIETD_RELATIONS_DONHANG">
-            <End Role="DONHANG" EntitySet="DONHANGs" />
-            <End Role="CHITIETDONHANG" EntitySet="CHITIETDONHANGs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CHITIETD_RELATIONS_SANPHAM" Association="Self.FK_CHITIETD_RELATIONS_SANPHAM">
-            <End Role="SANPHAM" EntitySet="SANPHAMs" />
-            <End Role="CHITIETDONHANG" EntitySet="CHITIETDONHANGs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CHITIETH_RELATIONS_HOADON" Association="Self.FK_CHITIETH_RELATIONS_HOADON">
-            <End Role="HOADON" EntitySet="HOADONs" />
-            <End Role="CHITIETHOADON" EntitySet="CHITIETHOADONs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CHITIETH_RELATIONS_SANPHAM" Association="Self.FK_CHITIETH_RELATIONS_SANPHAM">
-            <End Role="SANPHAM" EntitySet="SANPHAMs" />
-            <End Role="CHITIETHOADON" EntitySet="CHITIETHOADONs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CHITIETS_RELATIONS_DONHANG" Association="Self.FK_CHITIETS_RELATIONS_DONHANG">
-            <End Role="DONHANG" EntitySet="DONHANGs" />
-            <End Role="CHITIETSANPHAMTANGKEM" EntitySet="CHITIETSANPHAMTANGKEMs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_CHITIETS_RELATIONS_SANPHAM" Association="Self.FK_CHITIETS_RELATIONS_SANPHAM">
-            <End Role="SANPHAM" EntitySet="SANPHAMs" />
-            <End Role="CHITIETSANPHAMTANGKEM" EntitySet="CHITIETSANPHAMTANGKEMs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_DANHGIAD_RELATIONS_KHACHHAN" Association="Self.FK_DANHGIAD_RELATIONS_KHACHHAN">
-            <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
-            <End Role="DANHGIADICHVU" EntitySet="DANHGIADICHVUs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_DANHGIAD_RELATIONS_LOAIDICH" Association="Self.FK_DANHGIAD_RELATIONS_LOAIDICH">
-            <End Role="LOAIDICHVU" EntitySet="LOAIDICHVUs" />
-            <End Role="DANHGIADICHVU" EntitySet="DANHGIADICHVUs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_DANHGIAD_RELATIONS_MUCDOHAI" Association="Self.FK_DANHGIAD_RELATIONS_MUCDOHAI">
-            <End Role="MUCDOHAILONG" EntitySet="MUCDOHAILONGs" />
-            <End Role="DANHGIADICHVU" EntitySet="DANHGIADICHVUs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_DONHANG_RELATIONS_KHACHHAN" Association="Self.FK_DONHANG_RELATIONS_KHACHHAN">
-            <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
-            <End Role="DONHANG" EntitySet="DONHANGs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_DONHANG_RELATIONS_KHUYENMA" Association="Self.FK_DONHANG_RELATIONS_KHUYENMA">
-            <End Role="KHUYENMAI" EntitySet="KHUYENMAIs" />
-            <End Role="DONHANG" EntitySet="DONHANGs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_HOADON_RELATIONS_DONHANG" Association="Self.FK_HOADON_RELATIONS_DONHANG">
-            <End Role="DONHANG" EntitySet="DONHANGs" />
-            <End Role="HOADON" EntitySet="HOADONs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_HINHTHUC_RELATIONS_LOAISANP" Association="Self.FK_HINHTHUC_RELATIONS_LOAISANP">
-            <End Role="LOAISANPHAM" EntitySet="LOAISANPHAMs" />
-            <End Role="HINHTHUCGIAMGIA" EntitySet="HINHTHUCGIAMGIAs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_KHUYENMAI_HINHTHUCGIAMGIA" Association="Self.FK_KHUYENMAI_HINHTHUCGIAMGIA">
-            <End Role="HINHTHUCGIAMGIA" EntitySet="HINHTHUCGIAMGIAs" />
-            <End Role="KHUYENMAI" EntitySet="KHUYENMAIs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_HINHTHUCTANGKEM_LOAISANPHAM" Association="Self.FK_HINHTHUCTANGKEM_LOAISANPHAM">
-            <End Role="LOAISANPHAM" EntitySet="LOAISANPHAMs" />
-            <End Role="HINHTHUCTANGKEM" EntitySet="HINHTHUCTANGKEMs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_KHUYENMA_RELATIONS_HINHTHUCTANGKEM" Association="Self.FK_KHUYENMA_RELATIONS_HINHTHUCTANGKEM">
-            <End Role="HINHTHUCTANGKEM" EntitySet="HINHTHUCTANGKEMs" />
-            <End Role="KHUYENMAI" EntitySet="KHUYENMAIs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_KHUYENMAI_HINHTHUCVOUCHER" Association="Self.FK_KHUYENMAI_HINHTHUCVOUCHER">
-            <End Role="HINHTHUCVOUCHER" EntitySet="HINHTHUCVOUCHERs" />
-            <End Role="KHUYENMAI" EntitySet="KHUYENMAIs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_KHACHHAN_RELATIONS_LOAIKHAC" Association="Self.FK_KHACHHAN_RELATIONS_LOAIKHAC">
-            <End Role="LOAIKHACHHANG" EntitySet="LOAIKHACHHANGs" />
-            <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_KHACHHAN_RELATIONS_THETHANH" Association="Self.FK_KHACHHAN_RELATIONS_THETHANH">
-            <End Role="THETHANHVIEN" EntitySet="THETHANHVIENs" />
-            <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_KHUYENMA_RELATIONS_LOAIKHACHHANG" Association="Self.FK_KHUYENMA_RELATIONS_LOAIKHACHHANG">
-            <End Role="LOAIKHACHHANG" EntitySet="LOAIKHACHHANGs" />
-            <End Role="KHUYENMAI" EntitySet="KHUYENMAIs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_SANPHAM_RELATIONS_LOAISANP" Association="Self.FK_SANPHAM_RELATIONS_LOAISANP">
-            <End Role="LOAISANPHAM" EntitySet="LOAISANPHAMs" />
-            <End Role="SANPHAM" EntitySet="SANPHAMs" />
-          </AssociationSet>
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1277,219 +1236,216 @@
           <EntitySetMapping Name="CAPDOTHEs">
             <EntityTypeMapping TypeName="QuanLyKhuyenMaiModel.CAPDOTHE">
               <MappingFragment StoreEntitySet="CAPDOTHE">
-                <ScalarProperty Name="MACD" ColumnName="MACD" />
-                <ScalarProperty Name="MALKH" ColumnName="MALKH" />
-                <ScalarProperty Name="TENCD" ColumnName="TENCD" />
-                <ScalarProperty Name="DIEMCD" ColumnName="DIEMCD" />
                 <ScalarProperty Name="NGAYTAO" ColumnName="NGAYTAO" />
+                <ScalarProperty Name="DIEMCD" ColumnName="DIEMCD" />
+                <ScalarProperty Name="TENCD" ColumnName="TENCD" />
+                <ScalarProperty Name="MACD" ColumnName="MACD" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="CHITIETDONHANGs">
             <EntityTypeMapping TypeName="QuanLyKhuyenMaiModel.CHITIETDONHANG">
               <MappingFragment StoreEntitySet="CHITIETDONHANG">
-                <ScalarProperty Name="MACTDH" ColumnName="MACTDH" />
-                <ScalarProperty Name="MADH" ColumnName="MADH" />
                 <ScalarProperty Name="MASP" ColumnName="MASP" />
+                <ScalarProperty Name="MADH" ColumnName="MADH" />
+                <ScalarProperty Name="MACTDH" ColumnName="MACTDH" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="CHITIETHOADONs">
             <EntityTypeMapping TypeName="QuanLyKhuyenMaiModel.CHITIETHOADON">
               <MappingFragment StoreEntitySet="CHITIETHOADON">
-                <ScalarProperty Name="MACTHD" ColumnName="MACTHD" />
-                <ScalarProperty Name="SOHD" ColumnName="SOHD" />
                 <ScalarProperty Name="MASP" ColumnName="MASP" />
+                <ScalarProperty Name="SOHD" ColumnName="SOHD" />
+                <ScalarProperty Name="MACTHD" ColumnName="MACTHD" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="CHITIETSANPHAMTANGKEMs">
             <EntityTypeMapping TypeName="QuanLyKhuyenMaiModel.CHITIETSANPHAMTANGKEM">
               <MappingFragment StoreEntitySet="CHITIETSANPHAMTANGKEM">
-                <ScalarProperty Name="MASPTK" ColumnName="MASPTK" />
-                <ScalarProperty Name="MADH" ColumnName="MADH" />
                 <ScalarProperty Name="MASP" ColumnName="MASP" />
+                <ScalarProperty Name="MADH" ColumnName="MADH" />
+                <ScalarProperty Name="MASPTK" ColumnName="MASPTK" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="DANHGIADICHVUs">
             <EntityTypeMapping TypeName="QuanLyKhuyenMaiModel.DANHGIADICHVU">
               <MappingFragment StoreEntitySet="DANHGIADICHVU">
-                <ScalarProperty Name="MADGDV" ColumnName="MADGDV" />
-                <ScalarProperty Name="NGAYDGDV" ColumnName="NGAYDGDV" />
-                <ScalarProperty Name="MAMUC" ColumnName="MAMUC" />
-                <ScalarProperty Name="MAKH" ColumnName="MAKH" />
                 <ScalarProperty Name="MALDV" ColumnName="MALDV" />
+                <ScalarProperty Name="MAKH" ColumnName="MAKH" />
+                <ScalarProperty Name="MAMUC" ColumnName="MAMUC" />
+                <ScalarProperty Name="NGAYDGDV" ColumnName="NGAYDGDV" />
+                <ScalarProperty Name="MADGDV" ColumnName="MADGDV" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="DONHANGs">
             <EntityTypeMapping TypeName="QuanLyKhuyenMaiModel.DONHANG">
               <MappingFragment StoreEntitySet="DONHANG">
-                <ScalarProperty Name="MADH" ColumnName="MADH" />
-                <ScalarProperty Name="NGAYTAO" ColumnName="NGAYTAO" />
-                <ScalarProperty Name="PHUONGTHUCTT" ColumnName="PHUONGTHUCTT" />
-                <ScalarProperty Name="COKM" ColumnName="COKM" />
-                <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
-                <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
-                <ScalarProperty Name="MAKH" ColumnName="MAKH" />
                 <ScalarProperty Name="MAKM" ColumnName="MAKM" />
+                <ScalarProperty Name="MAKH" ColumnName="MAKH" />
+                <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+                <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+                <ScalarProperty Name="COKM" ColumnName="COKM" />
+                <ScalarProperty Name="PHUONGTHUCTT" ColumnName="PHUONGTHUCTT" />
+                <ScalarProperty Name="NGAYTAO" ColumnName="NGAYTAO" />
+                <ScalarProperty Name="MADH" ColumnName="MADH" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="HINHTHUCGIAMGIAs">
             <EntityTypeMapping TypeName="QuanLyKhuyenMaiModel.HINHTHUCGIAMGIA">
               <MappingFragment StoreEntitySet="HINHTHUCGIAMGIA">
-                <ScalarProperty Name="MAHTGG" ColumnName="MAHTGG" />
-                <ScalarProperty Name="MALSP" ColumnName="MALSP" />
-                <ScalarProperty Name="TENHTGG" ColumnName="TENHTGG" />
-                <ScalarProperty Name="GIAMGIA" ColumnName="GIAMGIA" />
-                <ScalarProperty Name="NGAYTAO" ColumnName="NGAYTAO" />
                 <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+                <ScalarProperty Name="NGAYTAO" ColumnName="NGAYTAO" />
+                <ScalarProperty Name="GIAMGIA" ColumnName="GIAMGIA" />
+                <ScalarProperty Name="TENHTGG" ColumnName="TENHTGG" />
+                <ScalarProperty Name="MALSP" ColumnName="MALSP" />
+                <ScalarProperty Name="MAHTGG" ColumnName="MAHTGG" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="HINHTHUCTANGKEMs">
             <EntityTypeMapping TypeName="QuanLyKhuyenMaiModel.HINHTHUCTANGKEM">
               <MappingFragment StoreEntitySet="HINHTHUCTANGKEM">
-                <ScalarProperty Name="MAHTTK" ColumnName="MAHTTK" />
-                <ScalarProperty Name="MALSP" ColumnName="MALSP" />
-                <ScalarProperty Name="TENHTTK" ColumnName="TENHTTK" />
-                <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
-                <ScalarProperty Name="NGAYTAO" ColumnName="NGAYTAO" />
                 <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+                <ScalarProperty Name="NGAYTAO" ColumnName="NGAYTAO" />
+                <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+                <ScalarProperty Name="TENHTTK" ColumnName="TENHTTK" />
+                <ScalarProperty Name="MALSP" ColumnName="MALSP" />
+                <ScalarProperty Name="MAHTTK" ColumnName="MAHTTK" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="HINHTHUCVOUCHERs">
             <EntityTypeMapping TypeName="QuanLyKhuyenMaiModel.HINHTHUCVOUCHER">
               <MappingFragment StoreEntitySet="HINHTHUCVOUCHER">
-                <ScalarProperty Name="MAHTVC" ColumnName="MAHTVC" />
-                <ScalarProperty Name="TENVC" ColumnName="TENVC" />
-                <ScalarProperty Name="TIENGIAM" ColumnName="TIENGIAM" />
-                <ScalarProperty Name="NGAYTAO" ColumnName="NGAYTAO" />
-                <ScalarProperty Name="MOTA" ColumnName="MOTA" />
                 <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+                <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+                <ScalarProperty Name="NGAYTAO" ColumnName="NGAYTAO" />
+                <ScalarProperty Name="TIENGIAM" ColumnName="TIENGIAM" />
+                <ScalarProperty Name="TENVC" ColumnName="TENVC" />
+                <ScalarProperty Name="MAHTVC" ColumnName="MAHTVC" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="HOADONs">
             <EntityTypeMapping TypeName="QuanLyKhuyenMaiModel.HOADON">
               <MappingFragment StoreEntitySet="HOADON">
-                <ScalarProperty Name="SOHD" ColumnName="SOHD" />
-                <ScalarProperty Name="MADH" ColumnName="MADH" />
                 <ScalarProperty Name="NGAYTAO" ColumnName="NGAYTAO" />
+                <ScalarProperty Name="MADH" ColumnName="MADH" />
+                <ScalarProperty Name="SOHD" ColumnName="SOHD" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="KHACHHANGs">
             <EntityTypeMapping TypeName="QuanLyKhuyenMaiModel.KHACHHANG">
               <MappingFragment StoreEntitySet="KHACHHANG">
-                <ScalarProperty Name="MAKH" ColumnName="MAKH" />
-                <ScalarProperty Name="TENKH" ColumnName="TENKH" />
-                <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
-                <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
-                <ScalarProperty Name="SDT" ColumnName="SDT" />
-                <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
-                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
-                <ScalarProperty Name="MALKH" ColumnName="MALKH" />
                 <ScalarProperty Name="MATHE" ColumnName="MATHE" />
+                <ScalarProperty Name="MALKH" ColumnName="MALKH" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+                <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+                <ScalarProperty Name="TENKH" ColumnName="TENKH" />
+                <ScalarProperty Name="MAKH" ColumnName="MAKH" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="KHUYENMAIs">
             <EntityTypeMapping TypeName="QuanLyKhuyenMaiModel.KHUYENMAI">
               <MappingFragment StoreEntitySet="KHUYENMAI">
-                <ScalarProperty Name="MAKM" ColumnName="MAKM" />
-                <ScalarProperty Name="TENKM" ColumnName="TENKM" />
-                <ScalarProperty Name="MALKH" ColumnName="MALKH" />
-                <ScalarProperty Name="MAHTTK" ColumnName="MAHTTK" />
-                <ScalarProperty Name="MAHTVC" ColumnName="MAHTVC" />
-                <ScalarProperty Name="MAHTGG" ColumnName="MAHTGG" />
-                <ScalarProperty Name="NGAYBATDAU" ColumnName="NGAYBATDAU" />
-                <ScalarProperty Name="NGAYKETTHUC" ColumnName="NGAYKETTHUC" />
-                <ScalarProperty Name="MOTA" ColumnName="MOTA" />
                 <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+                <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+                <ScalarProperty Name="NGAYKETTHUC" ColumnName="NGAYKETTHUC" />
+                <ScalarProperty Name="NGAYBATDAU" ColumnName="NGAYBATDAU" />
+                <ScalarProperty Name="MAHTGG" ColumnName="MAHTGG" />
+                <ScalarProperty Name="MAHTVC" ColumnName="MAHTVC" />
+                <ScalarProperty Name="MAHTTK" ColumnName="MAHTTK" />
+                <ScalarProperty Name="MALKH" ColumnName="MALKH" />
+                <ScalarProperty Name="TENKM" ColumnName="TENKM" />
+                <ScalarProperty Name="MAKM" ColumnName="MAKM" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LOAIDICHVUs">
             <EntityTypeMapping TypeName="QuanLyKhuyenMaiModel.LOAIDICHVU">
               <MappingFragment StoreEntitySet="LOAIDICHVU">
-                <ScalarProperty Name="MALDV" ColumnName="MALDV" />
-                <ScalarProperty Name="TENLDV" ColumnName="TENLDV" />
-                <ScalarProperty Name="NGAYTAO" ColumnName="NGAYTAO" />
                 <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+                <ScalarProperty Name="NGAYTAO" ColumnName="NGAYTAO" />
+                <ScalarProperty Name="TENLDV" ColumnName="TENLDV" />
+                <ScalarProperty Name="MALDV" ColumnName="MALDV" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LOAIKHACHHANGs">
             <EntityTypeMapping TypeName="QuanLyKhuyenMaiModel.LOAIKHACHHANG">
               <MappingFragment StoreEntitySet="LOAIKHACHHANG">
-                <ScalarProperty Name="MALKH" ColumnName="MALKH" />
-                <ScalarProperty Name="CAP_MACD" ColumnName="CAP_MACD" />
-                <ScalarProperty Name="TENLKH" ColumnName="TENLKH" />
-                <ScalarProperty Name="NGAYTAO" ColumnName="NGAYTAO" />
                 <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+                <ScalarProperty Name="NGAYTAO" ColumnName="NGAYTAO" />
+                <ScalarProperty Name="TENLKH" ColumnName="TENLKH" />
                 <ScalarProperty Name="MACD" ColumnName="MACD" />
+                <ScalarProperty Name="MALKH" ColumnName="MALKH" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LOAISANPHAMs">
             <EntityTypeMapping TypeName="QuanLyKhuyenMaiModel.LOAISANPHAM">
               <MappingFragment StoreEntitySet="LOAISANPHAM">
-                <ScalarProperty Name="MALSP" ColumnName="MALSP" />
-                <ScalarProperty Name="TENLSP" ColumnName="TENLSP" />
-                <ScalarProperty Name="NGAYTAO" ColumnName="NGAYTAO" />
                 <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+                <ScalarProperty Name="NGAYTAO" ColumnName="NGAYTAO" />
+                <ScalarProperty Name="TENLSP" ColumnName="TENLSP" />
+                <ScalarProperty Name="MALSP" ColumnName="MALSP" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="MUCDOHAILONGs">
             <EntityTypeMapping TypeName="QuanLyKhuyenMaiModel.MUCDOHAILONG">
               <MappingFragment StoreEntitySet="MUCDOHAILONG">
-                <ScalarProperty Name="MAMUC" ColumnName="MAMUC" />
-                <ScalarProperty Name="TENMUC" ColumnName="TENMUC" />
-                <ScalarProperty Name="MOTA" ColumnName="MOTA" />
                 <ScalarProperty Name="NGAYTAO" ColumnName="NGAYTAO" />
+                <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+                <ScalarProperty Name="TENMUC" ColumnName="TENMUC" />
+                <ScalarProperty Name="MAMUC" ColumnName="MAMUC" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="SANPHAMs">
             <EntityTypeMapping TypeName="QuanLyKhuyenMaiModel.SANPHAM">
               <MappingFragment StoreEntitySet="SANPHAM">
-                <ScalarProperty Name="MASP" ColumnName="MASP" />
-                <ScalarProperty Name="TENSP" ColumnName="TENSP" />
-                <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
-                <ScalarProperty Name="GIABAN" ColumnName="GIABAN" />
-                <ScalarProperty Name="NGAYTAO" ColumnName="NGAYTAO" />
-                <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
-                <ScalarProperty Name="MOTA" ColumnName="MOTA" />
                 <ScalarProperty Name="MALSP" ColumnName="MALSP" />
+                <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+                <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+                <ScalarProperty Name="NGAYTAO" ColumnName="NGAYTAO" />
+                <ScalarProperty Name="GIABAN" ColumnName="GIABAN" />
+                <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+                <ScalarProperty Name="TENSP" ColumnName="TENSP" />
+                <ScalarProperty Name="MASP" ColumnName="MASP" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
             <EntityTypeMapping TypeName="QuanLyKhuyenMaiModel.sysdiagram">
               <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
                 <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="THETHANHVIENs">
             <EntityTypeMapping TypeName="QuanLyKhuyenMaiModel.THETHANHVIEN">
               <MappingFragment StoreEntitySet="THETHANHVIEN">
-                <ScalarProperty Name="MATHE" ColumnName="MATHE" />
-                <ScalarProperty Name="DIEM" ColumnName="DIEM" />
-                <ScalarProperty Name="NGAYTAO" ColumnName="NGAYTAO" />
-                <ScalarProperty Name="NGAYSUA" ColumnName="NGAYSUA" />
-                <ScalarProperty Name="TINHTRANG" ColumnName="TINHTRANG" />
                 <ScalarProperty Name="MACD" ColumnName="MACD" />
-                <ScalarProperty Name="MAKH" ColumnName="MAKH" />
+                <ScalarProperty Name="TINHTRANG" ColumnName="TINHTRANG" />
+                <ScalarProperty Name="NGAYSUA" ColumnName="NGAYSUA" />
+                <ScalarProperty Name="NGAYTAO" ColumnName="NGAYTAO" />
+                <ScalarProperty Name="DIEM" ColumnName="DIEM" />
+                <ScalarProperty Name="MATHE" ColumnName="MATHE" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

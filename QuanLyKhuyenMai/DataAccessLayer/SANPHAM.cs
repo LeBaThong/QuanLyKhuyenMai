@@ -24,7 +24,7 @@ namespace DataAccessLayer
     
         public int MASP { get; set; }
         public string TENSP { get; set; }
-        public Nullable<decimal> SOLUONG { get; set; }
+        public Nullable<int> SOLUONG { get; set; }
         public Nullable<float> GIABAN { get; set; }
         public Nullable<System.DateTime> NGAYTAO { get; set; }
         public Nullable<bool> TRANGTHAI { get; set; }

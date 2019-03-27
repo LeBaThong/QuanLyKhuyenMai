@@ -22,7 +22,7 @@ namespace DataAccessLayer
     
         public int MAHTVC { get; set; }
         public string TENVC { get; set; }
-        public Nullable<decimal> TIENGIAM { get; set; }
+        public Nullable<int> TIENGIAM { get; set; }
         public System.DateTime NGAYTAO { get; set; }
         public string MOTA { get; set; }
         public Nullable<bool> TRANGTHAI { get; set; }

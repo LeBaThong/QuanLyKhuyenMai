@@ -65,46 +65,56 @@
     <Compile Include="CHITIETDONHANG.cs">
       <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
     </Compile>
+    <Compile Include="CHITIETDONHANG_DAL.cs" />
     <Compile Include="CHITIETHOADON.cs">
       <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
     </Compile>
     <Compile Include="CHITIETSANPHAMTANGKEM.cs">
       <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
     <Compile Include="DANHGIADICHVU.cs">
       <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
     </Compile>
+    <Compile Include="DataProvider.cs" />
     <Compile Include="DONHANG.cs">
       <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
     </Compile>
+    <Compile Include="DONHANG_DAL.cs" />
     <Compile Include="HINHTHUCGIAMGIA.cs">
       <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
     </Compile>
+    <Compile Include="HINHTHUCGIAMGIA_DAL.cs" />
+    <Compile Include="HINHTHUCKHUYENMAI_DAL.cs" />
     <Compile Include="HINHTHUCTANGKEM.cs">
       <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
     </Compile>
+    <Compile Include="HINHTHUCTANGKEM_DAL.cs" />
     <Compile Include="HINHTHUCVOUCHER.cs">
       <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
     </Compile>
+    <Compile Include="HINHTHUCVOUCHER_DAL.cs" />
     <Compile Include="HOADON.cs">
       <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
     </Compile>
     <Compile Include="KHACHHANG.cs">
       <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
     </Compile>
+    <Compile Include="KHACHHANG_DAL.cs" />
     <Compile Include="KHUYENMAI.cs">
       <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
     </Compile>
+    <Compile Include="KHUYENMAI_DAL.cs" />
     <Compile Include="LOAIDICHVU.cs">
       <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
     </Compile>
     <Compile Include="LOAIKHACHHANG.cs">
       <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
     </Compile>
+    <Compile Include="LOAIKHACHHANG_DAL.cs" />
     <Compile Include="LOAISANPHAM.cs">
       <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
     </Compile>
+    <Compile Include="LOAISANPHAM_DAL.cs" />
     <Compile Include="MUCDOHAILONG.cs">
       <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
     </Compile>
@@ -127,6 +137,7 @@
     <Compile Include="SANPHAM.cs">
       <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
     </Compile>
+    <Compile Include="SANPHAM_DAL.cs" />
     <Compile Include="sysdiagram.cs">
       <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
     </Compile>
@@ -156,19 +167,19 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="QuanLyKhuyenMai.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>QuanLyKhuyenMai.Context.cs</LastGenOutput>
       <DependentUpon>QuanLyKhuyenMai.edmx</DependentUpon>
+      <LastGenOutput>QuanLyKhuyenMai.Context.cs</LastGenOutput>
     </Content>
     <Content Include="QuanLyKhuyenMai.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>QuanLyKhuyenMai.edmx</DependentUpon>
       <LastGenOutput>QuanLyKhuyenMai.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -23,7 +23,7 @@ namespace DataAccessLayer
         public int MAHTTK { get; set; }
         public Nullable<int> MALSP { get; set; }
         public string TENHTTK { get; set; }
-        public Nullable<decimal> SOLUONG { get; set; }
+        public Nullable<int> SOLUONG { get; set; }
         public Nullable<System.DateTime> NGAYTAO { get; set; }
         public string MOTA { get; set; }
     

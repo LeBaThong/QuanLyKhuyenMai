@@ -85,6 +85,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ucDonHang\templateDonHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDonHang\templateDonHang.Designer.cs">
+      <DependentUpon>templateDonHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucHeThong\ucDangNhap.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -115,6 +121,12 @@
     <Compile Include="ucKhuyenMai\ucChuongTrinhKhuyenMai.Designer.cs">
       <DependentUpon>ucChuongTrinhKhuyenMai.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucKhuyenMai\ucDonHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucKhuyenMai\ucDonHang.Designer.cs">
+      <DependentUpon>ucDonHang.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +134,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDonHang\templateDonHang.resx">
+      <DependentUpon>templateDonHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucHeThong\ucDangNhap.resx">
       <DependentUpon>ucDangNhap.cs</DependentUpon>
@@ -134,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucKhuyenMai\ucChuongTrinhKhuyenMai.resx">
       <DependentUpon>ucChuongTrinhKhuyenMai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucKhuyenMai\ucDonHang.resx">
+      <DependentUpon>ucDonHang.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
