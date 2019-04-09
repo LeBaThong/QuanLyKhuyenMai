@@ -26,6 +26,7 @@ namespace DataAccessLayer
         public Nullable<int> MAHTTK { get; set; }
         public Nullable<int> MAHTVC { get; set; }
         public Nullable<int> MAHTGG { get; set; }
+        public Nullable<int> MALSP { get; set; }
         public Nullable<System.DateTime> NGAYBATDAU { get; set; }
         public Nullable<System.DateTime> NGAYKETTHUC { get; set; }
         public string MOTA { get; set; }
@@ -37,5 +38,6 @@ namespace DataAccessLayer
         public virtual HINHTHUCTANGKEM HINHTHUCTANGKEM { get; set; }
         public virtual HINHTHUCVOUCHER HINHTHUCVOUCHER { get; set; }
         public virtual LOAIKHACHHANG LOAIKHACHHANG { get; set; }
+        public virtual LOAISANPHAM LOAISANPHAM { get; set; }
     }
 }

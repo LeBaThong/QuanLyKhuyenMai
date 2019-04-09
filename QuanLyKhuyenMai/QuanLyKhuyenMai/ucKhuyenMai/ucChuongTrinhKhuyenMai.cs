@@ -31,6 +31,10 @@ namespace QuanLyKhuyenMai.ucKhuyenMai
             mCmbLoaiKH.DataSource = LOAIKHACHHANG_BLL.LoadLoaiKhachHang();
             mCmbLoaiKH.DisplayMember = "TENLKH";
             mCmbLoaiKH.ValueMember = "MALKH";
+            //load loại sản phẩm
+            cmbLSP.DataSource = LOAISANPHAM_BLL.LoadLoaiSanPham();
+            cmbLSP.DisplayMember = "TENLSP";
+            cmbLSP.ValueMember = "MALSP";
             //load combobox hinh thuc khuyen mai
             mCmbHTKM.DataSource = HINHTHUCKHUYENMAI_BLL.LoadHinhThucKhuyenMai();
             SetDoRongCot();
@@ -65,6 +69,7 @@ namespace QuanLyKhuyenMai.ucKhuyenMai
             KHUYENMAI km = new KHUYENMAI();
             km.TENKM = txtTenKM.Text;
             km.MALKH = Convert.ToInt32(mCmbLoaiKH.SelectedValue);
+            km.MALSP = Convert.ToInt32(cmbLSP.SelectedValue);
             km.NGAYBATDAU = dtpNgayBatDau.Value;
             km.NGAYKETTHUC = dtpNgayKetThuc.Value;
             km.MOTA = txtMoTa.Text;
@@ -122,6 +127,7 @@ namespace QuanLyKhuyenMai.ucKhuyenMai
                 mLblMaKM.Text = dr.Cells["MAKM"].Value.ToString();
                 txtTenKM.Text = dr.Cells["TENKM"].Value.ToString();
                 mCmbLoaiKH.SelectedValue = dr.Cells["MALKH"].Value;
+                cmbLSP.SelectedValue = dr.Cells["MALSP"].Value;
                 if (dr.Cells["MAHTGG"].Value != null)
                 {
                     mCmbHTKM.Text = HINHTHUCKHUYENMAI_DTO.GIAM_GIA.ToString();
@@ -167,7 +173,7 @@ namespace QuanLyKhuyenMai.ucKhuyenMai
             km.MAKM = Convert.ToInt32(mLblMaKM.Text);
             km.TENKM = txtTenKM.Text;
             km.MALKH = Convert.ToInt32(mCmbLoaiKH.SelectedValue);
-
+            km.MALSP = Convert.ToInt32(cmbLSP.SelectedValue);
             km.NGAYBATDAU = dtpNgayBatDau.Value;
             km.NGAYKETTHUC = dtpNgayKetThuc.Value;
             km.MOTA = txtMoTa.Text;
@@ -209,11 +215,13 @@ namespace QuanLyKhuyenMai.ucKhuyenMai
 
 
             //Xử lý cập nhật trên giao diện datagridview
-            //Lấy ra nhân viên được chọn trên lstNhanVienDTO
+            //Lấy ra khuyến mãi  được chọn trên lstKhuyenMaiDTO
             KHUYENMAI_DTO kmDTO = lstKhuyenMaiDTO.Single(n => n.MAKM == km.MAKM);
             kmDTO.TENKM = kmDTOUpdate.TENKM;
             kmDTO.MALKH = kmDTOUpdate.MALKH;
             kmDTO.TENLKH = kmDTOUpdate.TENLKH;
+            kmDTO.MALSP = kmDTOUpdate.MALSP;
+            kmDTO.TENLSP = kmDTOUpdate.TENLSP;
             kmDTO.MAHTTK = kmDTOUpdate.MAHTTK;
             kmDTO.MAHTGG = kmDTOUpdate.MAHTGG;
             kmDTO.MAHTVC = kmDTOUpdate.MAHTVC;
@@ -223,7 +231,7 @@ namespace QuanLyKhuyenMai.ucKhuyenMai
             kmDTO.MOTA = kmDTOUpdate.MOTA;
             kmDTO.TRANGTHAI = kmDTOUpdate.TRANGTHAI;
             LoadDGVKhuyenMai();
-            MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Cập nhật khuyến mãi thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -243,26 +251,37 @@ namespace QuanLyKhuyenMai.ucKhuyenMai
                 KHUYENMAI_DTO kmDTO = lstKhuyenMaiDTO.Single(n => n.MAKM == maKM);
                 lstKhuyenMaiDTO.Remove(kmDTO);//remove phần được chọn từ lstKhuyenMaiDTO
                 LoadDGVKhuyenMai();
-                MessageBox.Show("Xóa thành công !", "Thông báo");
+                MessageBox.Show("Xóa khuyến mãi thành công !", "Thông báo");
                 return;
             }
-            MessageBox.Show("Xóa không thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Xóa khuyến mãi không thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void SetDoRongCot()
         {
             mDgvChuongTrinhKhuyenMai.Columns[0].Visible = false;
+            //mDgvChuongTrinhKhuyenMai.Columns[0].Visible = true;
             mDgvChuongTrinhKhuyenMai.Columns[1].Width = 150;
             mDgvChuongTrinhKhuyenMai.Columns[2].Visible = false;
             mDgvChuongTrinhKhuyenMai.Columns[3].Visible = false;
             mDgvChuongTrinhKhuyenMai.Columns[4].Visible = false;
             mDgvChuongTrinhKhuyenMai.Columns[5].Visible = false;
-            mDgvChuongTrinhKhuyenMai.Columns[6].Width = 140;
-            mDgvChuongTrinhKhuyenMai.Columns[7].Width = 140;
+            mDgvChuongTrinhKhuyenMai.Columns[6].Visible = false;
+            //mDgvChuongTrinhKhuyenMai.Columns[2].Visible = true;
+            //mDgvChuongTrinhKhuyenMai.Columns[3].Visible = true;
+            //mDgvChuongTrinhKhuyenMai.Columns[4].Visible = true;
+            //mDgvChuongTrinhKhuyenMai.Columns[5].Visible = true;
+            mDgvChuongTrinhKhuyenMai.Columns[6].Width = 130;
+            mDgvChuongTrinhKhuyenMai.Columns[7].Width = 120;
             mDgvChuongTrinhKhuyenMai.Columns[8].Width = 125;
             mDgvChuongTrinhKhuyenMai.Columns[9].Width = 125;
-            mDgvChuongTrinhKhuyenMai.Columns[10].Width = 115;
+            mDgvChuongTrinhKhuyenMai.Columns[10].Width = 110;
             mDgvChuongTrinhKhuyenMai.Columns[11].Width = 110;
+
+        }
+
+        private void metroPanel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

@@ -15,5 +15,11 @@ namespace DataAccessLayer
                      
             return kh;
         }
+        //public static KHACHHANG TimKhachHang(int makh)
+        //{
+        //    QuanLyKhuyenMaiEntities db = DataProvider.dbContext;
+        //    KHACHHANG kh = db.KHACHHANGs.Find(makh);
+        //    return kh;
+        //}
     }
 }

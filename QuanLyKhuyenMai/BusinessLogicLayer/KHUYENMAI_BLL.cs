@@ -26,5 +26,13 @@ namespace BusinessLogicLayer
         {
             return KHUYENMAI_DAL.XoaKhuyenMai(maKM);
         }
+        public static KHUYENMAI TimKhuyenMaiMax()
+        {
+            return KHUYENMAI_DAL.TimKhuyenMaiMax();
+        }
+        public static KHUYENMAI TimKhuyenMai(int makm)
+        {
+            return KHUYENMAI_DAL.TimKhuyenMai(makm);
+        }
     }
 }

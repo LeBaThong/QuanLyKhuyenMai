@@ -34,7 +34,6 @@
             // mPanelChinh
             // 
             this.mPanelChinh.BackColor = System.Drawing.Color.White;
-            this.mPanelChinh.UseCustomBackColor = true;
             this.mPanelChinh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mPanelChinh.HorizontalScrollbarBarColor = true;
             this.mPanelChinh.HorizontalScrollbarHighlightOnWheel = false;
@@ -43,6 +42,7 @@
             this.mPanelChinh.Name = "mPanelChinh";
             this.mPanelChinh.Size = new System.Drawing.Size(972, 490);
             this.mPanelChinh.TabIndex = 0;
+            this.mPanelChinh.UseCustomBackColor = true;
             this.mPanelChinh.VerticalScrollbarBarColor = true;
             this.mPanelChinh.VerticalScrollbarHighlightOnWheel = false;
             this.mPanelChinh.VerticalScrollbarSize = 10;
@@ -54,7 +54,7 @@
             this.ClientSize = new System.Drawing.Size(1012, 570);
             this.Controls.Add(this.mPanelChinh);
             this.Name = "FormMain";
-            this.Text = "FormMain";
+            this.Text = "From Main";
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.ResumeLayout(false);
 

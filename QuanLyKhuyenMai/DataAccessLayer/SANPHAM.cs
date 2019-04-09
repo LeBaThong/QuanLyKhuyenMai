@@ -19,7 +19,7 @@ namespace DataAccessLayer
         {
             this.CHITIETDONHANGs = new HashSet<CHITIETDONHANG>();
             this.CHITIETHOADONs = new HashSet<CHITIETHOADON>();
-            this.CHITIETSANPHAMTANGKEMs = new HashSet<CHITIETSANPHAMTANGKEM>();
+            this.HINHTHUCTANGKEMs = new HashSet<HINHTHUCTANGKEM>();
         }
     
         public int MASP { get; set; }
@@ -36,7 +36,7 @@ namespace DataAccessLayer
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHITIETHOADON> CHITIETHOADONs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CHITIETSANPHAMTANGKEM> CHITIETSANPHAMTANGKEMs { get; set; }
+        public virtual ICollection<HINHTHUCTANGKEM> HINHTHUCTANGKEMs { get; set; }
         public virtual LOAISANPHAM LOAISANPHAM { get; set; }
     }
 }

@@ -17,5 +17,3 @@ C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\BusinessLogicLayer\bin\Debug\Metro
 C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\BusinessLogicLayer\bin\Debug\EntityFramework.dll
 C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll.config
 C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\BusinessLogicLayer\bin\Debug\EntityFramework.xml
-C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\BusinessLogicLayer\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\BusinessLogicLayer\bin\Debug\EntityFramework.SqlServer.xml

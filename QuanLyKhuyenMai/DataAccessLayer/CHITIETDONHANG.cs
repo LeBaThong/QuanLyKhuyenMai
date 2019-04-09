@@ -17,6 +17,8 @@ namespace DataAccessLayer
         public int MACTDH { get; set; }
         public Nullable<int> MADH { get; set; }
         public Nullable<int> MASP { get; set; }
+        public Nullable<double> GIA { get; set; }
+        public Nullable<int> SOLUONG { get; set; }
     
         public virtual DONHANG DONHANG { get; set; }
         public virtual SANPHAM SANPHAM { get; set; }

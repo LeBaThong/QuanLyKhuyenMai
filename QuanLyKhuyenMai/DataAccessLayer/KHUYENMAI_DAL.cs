@@ -18,6 +18,7 @@ namespace DataAccessLayer
             var lstHTGG = db.HINHTHUCGIAMGIAs;
             var lstHTTK = db.HINHTHUCTANGKEMs;
             var lstHTVC = db.HINHTHUCVOUCHERs;
+            var lstLoaiSP = db.LOAISANPHAMs;
 
             List<KHUYENMAI_DTO> lstKhuyenMaiDTO = new List<KHUYENMAI_DTO>();
             KHUYENMAI_DTO kmDTO;
@@ -27,6 +28,7 @@ namespace DataAccessLayer
                 kmDTO.MAKM = item.MAKM;
                 kmDTO.TENKM = item.TENKM;
                 kmDTO.MALKH = item.MALKH;
+                kmDTO.MALSP = item.MALSP;
                 kmDTO.MAHTGG = item.MAHTGG;
                 kmDTO.MAHTTK = item.MAHTTK;
                 kmDTO.MAHTVC = item.MAHTVC;
@@ -37,9 +39,14 @@ namespace DataAccessLayer
                 kmDTO.MOTA = item.MOTA;
                 kmDTO.TRANGTHAI = item.TRANGTHAI;
                 LOAIKHACHHANG lkh = lstLoaiKH.SingleOrDefault(n => n.MALKH == kmDTO.MALKH);
+                LOAISANPHAM lsp = lstLoaiSP.SingleOrDefault(n => n.MALSP == kmDTO.MALSP);
                 if (lkh != null)
                 {
                     kmDTO.TENLKH = lkh.TENLKH.ToString();
+                }
+                if (lsp !=null)
+                {
+                    kmDTO.TENLSP = lsp.TENLSP.ToString();
                 }
                 HINHTHUCGIAMGIA htgg = lstHTGG.SingleOrDefault(n => n.MAHTGG == kmDTO.MAHTGG);
 
@@ -88,13 +95,14 @@ namespace DataAccessLayer
             }
             kmUpdate.TENKM = km.TENKM;
             kmUpdate.MALKH = km.MALKH;
+            kmUpdate.MALSP = km.MALSP;
             kmUpdate.MAHTGG = km.MAHTGG;
             kmUpdate.MAHTTK = km.MAHTTK;
             kmUpdate.MAHTVC = km.MAHTVC;
             kmUpdate.NGAYBATDAU = km.NGAYBATDAU;
             kmUpdate.NGAYKETTHUC = km.NGAYKETTHUC;
             kmUpdate.MOTA = km.MOTA;
-            kmUpdate.TRANGTHAI = kmUpdate.TRANGTHAI;
+            kmUpdate.TRANGTHAI = km.TRANGTHAI;
             db.SaveChanges();
             KHUYENMAI_DTO kmDTO = CapNhatKhuyenMaiThanhKhuyenMaiDTO(kmUpdate);
             return kmDTO;
@@ -121,7 +129,7 @@ namespace DataAccessLayer
             kmDTO.TENKM = km.TENKM;
 
             kmDTO.MALKH = km.MALKH;
-            
+            kmDTO.MALSP = km.MALSP;
 
             kmDTO.MAHTGG = km.MAHTGG;
             kmDTO.MAHTTK = km.MAHTTK;
@@ -144,7 +152,23 @@ namespace DataAccessLayer
             kmDTO.MOTA = km.MOTA;
             kmDTO.TRANGTHAI = km.TRANGTHAI;
             kmDTO.TENLKH = km.LOAIKHACHHANG.TENLKH;
+            kmDTO.TENLSP = km.LOAISANPHAM.TENLSP;
             return kmDTO;
+        }
+        public static KHUYENMAI TimKhuyenMaiMax()
+        {
+            QuanLyKhuyenMaiEntities db = DataProvider.dbContext;
+            List<KHUYENMAI> lstKM = db.KHUYENMAIs.ToList();
+            int makmMax = lstKM.Max(n => n.MAKM);
+            KHUYENMAI km = lstKM.Single(n => n.MAKM == makmMax);
+            return km;
+            
+        }
+        public static KHUYENMAI TimKhuyenMai(int makm)
+        {
+            QuanLyKhuyenMaiEntities db = DataProvider.dbContext;
+            var km = db.KHUYENMAIs.Find(makm);           
+            return km;
         }
     }
 }

@@ -21,13 +21,13 @@ namespace DataAccessLayer
         }
     
         public int MAHTTK { get; set; }
-        public Nullable<int> MALSP { get; set; }
         public string TENHTTK { get; set; }
         public Nullable<int> SOLUONG { get; set; }
         public Nullable<System.DateTime> NGAYTAO { get; set; }
         public string MOTA { get; set; }
+        public Nullable<int> MASP { get; set; }
     
-        public virtual LOAISANPHAM LOAISANPHAM { get; set; }
+        public virtual SANPHAM SANPHAM { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<KHUYENMAI> KHUYENMAIs { get; set; }
     }

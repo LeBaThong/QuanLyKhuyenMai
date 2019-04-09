@@ -14,5 +14,11 @@ namespace DataAccessLayer
             var lstHTVC = db.HINHTHUCVOUCHERs.ToList();
             return lstHTVC;
         }
+        public static HINHTHUCVOUCHER TimHinhThucVoucher(int mahtvc)
+        {
+            QuanLyKhuyenMaiEntities db = DataProvider.dbContext;
+            var htvc = db.HINHTHUCVOUCHERs.Find(mahtvc);
+            return htvc;
+        }
     }
 }

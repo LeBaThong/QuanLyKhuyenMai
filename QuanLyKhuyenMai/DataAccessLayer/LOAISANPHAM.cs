@@ -17,8 +17,7 @@ namespace DataAccessLayer
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public LOAISANPHAM()
         {
-            this.HINHTHUCGIAMGIAs = new HashSet<HINHTHUCGIAMGIA>();
-            this.HINHTHUCTANGKEMs = new HashSet<HINHTHUCTANGKEM>();
+            this.KHUYENMAIs = new HashSet<KHUYENMAI>();
             this.SANPHAMs = new HashSet<SANPHAM>();
         }
     
@@ -28,9 +27,7 @@ namespace DataAccessLayer
         public bool TRANGTHAI { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HINHTHUCGIAMGIA> HINHTHUCGIAMGIAs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HINHTHUCTANGKEM> HINHTHUCTANGKEMs { get; set; }
+        public virtual ICollection<KHUYENMAI> KHUYENMAIs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SANPHAM> SANPHAMs { get; set; }
     }

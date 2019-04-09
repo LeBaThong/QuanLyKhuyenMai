@@ -13,5 +13,9 @@ namespace BusinessLogicLayer
         {
             return CHITIETDONHANG_DAL.ThemChiTietDonHang(ctdh);
         }
+        public static bool XoaChiTietDonHang(int mactdh)
+        {
+            return CHITIETDONHANG_DAL.XoaChiTietDonHang(mactdh);
+        }
     }
 }

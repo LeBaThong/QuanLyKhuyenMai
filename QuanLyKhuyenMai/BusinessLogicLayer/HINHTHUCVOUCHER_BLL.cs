@@ -14,5 +14,9 @@ namespace BusinessLogicLayer
         {
             return HINHTHUCVOUCHER_DAL.LoadHinhThucVoucher();
         }
+        public static HINHTHUCVOUCHER TimHinhThucVoucher(int mahtvc)
+        {
+            return HINHTHUCVOUCHER_DAL.TimHinhThucVoucher(mahtvc);
+        }
     }
 }

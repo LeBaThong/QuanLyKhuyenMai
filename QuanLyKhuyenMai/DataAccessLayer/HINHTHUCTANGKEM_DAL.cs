@@ -15,5 +15,11 @@ namespace DataAccessLayer
             var lstHTTK = db.HINHTHUCTANGKEMs.ToList();
             return lstHTTK;
         }
+        public static HINHTHUCTANGKEM TimHTTK(int mahttk)
+        {
+            QuanLyKhuyenMaiEntities db = DataProvider.dbContext;
+            var HTTK = db.HINHTHUCTANGKEMs.Find(mahttk);
+            return HTTK;
+        }
     }
 }

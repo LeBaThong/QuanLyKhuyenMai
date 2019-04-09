@@ -20,7 +20,8 @@ namespace DataTransferObject
 
         public string TENKH { get; set; }
         public string TENKM { get; set; }
+        public double THANHTIEN { get; set; }
 
-        //public double TONGTIEN { get; set; }
+       
     }
 }

@@ -20,5 +20,9 @@ namespace BusinessLogicLayer
         {
             return SANPHAM_DAL.LoadSanPham();
         }
+        public static SANPHAM TimSanPham(int masp)
+        {
+            return SANPHAM_DAL.TimSanPham(masp);
+        }
     }
 }

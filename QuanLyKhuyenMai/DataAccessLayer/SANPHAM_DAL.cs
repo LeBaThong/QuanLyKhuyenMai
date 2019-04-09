@@ -18,6 +18,7 @@ namespace DataAccessLayer
             var lstSP = db.SANPHAMs.ToList();
             return lstSP;
         }
+        //load sản phẩm lên combobox theo loại sản phẩm 
         public static List<SANPHAM_DTO> LoadSanPham(string tenLSP)
         {
             List<SANPHAM_DTO> lsSP_CANTIM = new List<SANPHAM_DTO>();
@@ -42,6 +43,12 @@ namespace DataAccessLayer
                 }
             }
             return lsSP_CANTIM;
+        }
+        public static SANPHAM TimSanPham(int masp)
+        {
+            QuanLyKhuyenMaiEntities db = DataProvider.dbContext;
+            SANPHAM sp = db.SANPHAMs.Find(masp);
+            return sp;
         }
     }
 }

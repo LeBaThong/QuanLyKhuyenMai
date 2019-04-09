@@ -12,8 +12,7 @@ namespace DataAccessLayer
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    using SqlProviderServices = System.Data.Entity.SqlServer.SqlProviderServices;
-
+    
     public partial class QuanLyKhuyenMaiEntities : DbContext
     {
         public QuanLyKhuyenMaiEntities()
@@ -29,7 +28,6 @@ namespace DataAccessLayer
         public virtual DbSet<CAPDOTHE> CAPDOTHEs { get; set; }
         public virtual DbSet<CHITIETDONHANG> CHITIETDONHANGs { get; set; }
         public virtual DbSet<CHITIETHOADON> CHITIETHOADONs { get; set; }
-        public virtual DbSet<CHITIETSANPHAMTANGKEM> CHITIETSANPHAMTANGKEMs { get; set; }
         public virtual DbSet<DANHGIADICHVU> DANHGIADICHVUs { get; set; }
         public virtual DbSet<DONHANG> DONHANGs { get; set; }
         public virtual DbSet<HINHTHUCGIAMGIA> HINHTHUCGIAMGIAs { get; set; }

@@ -16,6 +16,8 @@
     <Property Name="MACTDH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="MADH" Type="int" />
     <Property Name="MASP" Type="int" />
+    <Property Name="GIA" Type="float" />
+    <Property Name="SOLUONG" Type="int" />
   </EntityType>
   <EntityType Name="CHITIETHOADON">
     <Key>
@@ -23,14 +25,6 @@
     </Key>
     <Property Name="MACTHD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="SOHD" Type="int" />
-    <Property Name="MASP" Type="int" />
-  </EntityType>
-  <EntityType Name="CHITIETSANPHAMTANGKEM">
-    <Key>
-      <PropertyRef Name="MASPTK" />
-    </Key>
-    <Property Name="MASPTK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="MADH" Type="int" />
     <Property Name="MASP" Type="int" />
   </EntityType>
   <EntityType Name="DANHGIADICHVU">
@@ -61,7 +55,6 @@
       <PropertyRef Name="MAHTGG" />
     </Key>
     <Property Name="MAHTGG" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="MALSP" Type="int" />
     <Property Name="TENHTGG" Type="nvarchar" MaxLength="100" />
     <Property Name="GIAMGIA" Type="int" />
     <Property Name="NGAYTAO" Type="datetime" />
@@ -72,11 +65,11 @@
       <PropertyRef Name="MAHTTK" />
     </Key>
     <Property Name="MAHTTK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="MALSP" Type="int" />
     <Property Name="TENHTTK" Type="nvarchar" MaxLength="100" />
     <Property Name="SOLUONG" Type="int" />
     <Property Name="NGAYTAO" Type="datetime" />
     <Property Name="MOTA" Type="text" />
+    <Property Name="MASP" Type="int" />
   </EntityType>
   <EntityType Name="HINHTHUCVOUCHER">
     <Key>
@@ -121,6 +114,7 @@
     <Property Name="MAHTTK" Type="int" />
     <Property Name="MAHTVC" Type="int" />
     <Property Name="MAHTGG" Type="int" />
+    <Property Name="MALSP" Type="int" />
     <Property Name="NGAYBATDAU" Type="datetime" />
     <Property Name="NGAYKETTHUC" Type="datetime" />
     <Property Name="MOTA" Type="text" />
@@ -197,7 +191,7 @@
     <Property Name="TINHTRANG" Type="bit" Nullable="false" />
     <Property Name="MACD" Type="int" Nullable="false" />
   </EntityType>
-  <Association Name="FK_CHITIETD_RELATIONS_DONHANG">
+  <Association Name="FK_CHITIETDONHANG_DONHANG">
     <End Role="DONHANG" Type="Self.DONHANG" Multiplicity="0..1" />
     <End Role="CHITIETDONHANG" Type="Self.CHITIETDONHANG" Multiplicity="*" />
     <ReferentialConstraint>
@@ -209,7 +203,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_CHITIETD_RELATIONS_SANPHAM">
+  <Association Name="FK_CHITIETDONHANG_SANPHAM">
     <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="0..1" />
     <End Role="CHITIETDONHANG" Type="Self.CHITIETDONHANG" Multiplicity="*" />
     <ReferentialConstraint>
@@ -241,30 +235,6 @@
         <PropertyRef Name="MASP" />
       </Principal>
       <Dependent Role="CHITIETHOADON">
-        <PropertyRef Name="MASP" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_CHITIETS_RELATIONS_DONHANG">
-    <End Role="DONHANG" Type="Self.DONHANG" Multiplicity="0..1" />
-    <End Role="CHITIETSANPHAMTANGKEM" Type="Self.CHITIETSANPHAMTANGKEM" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="DONHANG">
-        <PropertyRef Name="MADH" />
-      </Principal>
-      <Dependent Role="CHITIETSANPHAMTANGKEM">
-        <PropertyRef Name="MADH" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_CHITIETS_RELATIONS_SANPHAM">
-    <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="0..1" />
-    <End Role="CHITIETSANPHAMTANGKEM" Type="Self.CHITIETSANPHAMTANGKEM" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="SANPHAM">
-        <PropertyRef Name="MASP" />
-      </Principal>
-      <Dependent Role="CHITIETSANPHAMTANGKEM">
         <PropertyRef Name="MASP" />
       </Dependent>
     </ReferentialConstraint>
@@ -305,7 +275,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_DONHANG_RELATIONS_KHACHHAN">
+  <Association Name="FK_DONHANG_KHACHHANG">
     <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="0..1" />
     <End Role="DONHANG" Type="Self.DONHANG" Multiplicity="*" />
     <ReferentialConstraint>
@@ -317,7 +287,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_DONHANG_RELATIONS_KHUYENMA">
+  <Association Name="FK_DONHANG_KHUYENMAI">
     <End Role="KHUYENMAI" Type="Self.KHUYENMAI" Multiplicity="0..1" />
     <End Role="DONHANG" Type="Self.DONHANG" Multiplicity="*" />
     <ReferentialConstraint>
@@ -329,31 +299,19 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_HINHTHUC_RELATIONS_LOAISANP">
-    <End Role="LOAISANPHAM" Type="Self.LOAISANPHAM" Multiplicity="0..1" />
-    <End Role="HINHTHUCGIAMGIA" Type="Self.HINHTHUCGIAMGIA" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="LOAISANPHAM">
-        <PropertyRef Name="MALSP" />
-      </Principal>
-      <Dependent Role="HINHTHUCGIAMGIA">
-        <PropertyRef Name="MALSP" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_HINHTHUCTANGKEM_LOAISANPHAM">
-    <End Role="LOAISANPHAM" Type="Self.LOAISANPHAM" Multiplicity="0..1" />
+  <Association Name="FK_HINHTHUCTANGKEM_SANPHAM">
+    <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="0..1" />
     <End Role="HINHTHUCTANGKEM" Type="Self.HINHTHUCTANGKEM" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="LOAISANPHAM">
-        <PropertyRef Name="MALSP" />
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MASP" />
       </Principal>
       <Dependent Role="HINHTHUCTANGKEM">
-        <PropertyRef Name="MALSP" />
+        <PropertyRef Name="MASP" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_HOADON_RELATIONS_DONHANG">
+  <Association Name="FK_HOADON_DONHANG">
     <End Role="DONHANG" Type="Self.DONHANG" Multiplicity="1" />
     <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
     <ReferentialConstraint>
@@ -398,6 +356,18 @@
       </Principal>
       <Dependent Role="KHUYENMAI">
         <PropertyRef Name="MALKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KHUYENMAI_LOAISANPHAM">
+    <End Role="LOAISANPHAM" Type="Self.LOAISANPHAM" Multiplicity="0..1" />
+    <End Role="KHUYENMAI" Type="Self.KHUYENMAI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAISANPHAM">
+        <PropertyRef Name="MALSP" />
+      </Principal>
+      <Dependent Role="KHUYENMAI">
+        <PropertyRef Name="MALSP" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -477,7 +447,6 @@
     <EntitySet Name="CAPDOTHE" EntityType="Self.CAPDOTHE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CHITIETDONHANG" EntityType="Self.CHITIETDONHANG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CHITIETHOADON" EntityType="Self.CHITIETHOADON" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="CHITIETSANPHAMTANGKEM" EntityType="Self.CHITIETSANPHAMTANGKEM" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DANHGIADICHVU" EntityType="Self.DANHGIADICHVU" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DONHANG" EntityType="Self.DONHANG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HINHTHUCGIAMGIA" EntityType="Self.HINHTHUCGIAMGIA" Schema="dbo" store:Type="Tables" />
@@ -493,11 +462,11 @@
     <EntitySet Name="SANPHAM" EntityType="Self.SANPHAM" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="THETHANHVIEN" EntityType="Self.THETHANHVIEN" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_CHITIETD_RELATIONS_DONHANG" Association="Self.FK_CHITIETD_RELATIONS_DONHANG">
+    <AssociationSet Name="FK_CHITIETDONHANG_DONHANG" Association="Self.FK_CHITIETDONHANG_DONHANG">
       <End Role="DONHANG" EntitySet="DONHANG" />
       <End Role="CHITIETDONHANG" EntitySet="CHITIETDONHANG" />
     </AssociationSet>
-    <AssociationSet Name="FK_CHITIETD_RELATIONS_SANPHAM" Association="Self.FK_CHITIETD_RELATIONS_SANPHAM">
+    <AssociationSet Name="FK_CHITIETDONHANG_SANPHAM" Association="Self.FK_CHITIETDONHANG_SANPHAM">
       <End Role="SANPHAM" EntitySet="SANPHAM" />
       <End Role="CHITIETDONHANG" EntitySet="CHITIETDONHANG" />
     </AssociationSet>
@@ -508,14 +477,6 @@
     <AssociationSet Name="FK_CHITIETH_RELATIONS_SANPHAM" Association="Self.FK_CHITIETH_RELATIONS_SANPHAM">
       <End Role="SANPHAM" EntitySet="SANPHAM" />
       <End Role="CHITIETHOADON" EntitySet="CHITIETHOADON" />
-    </AssociationSet>
-    <AssociationSet Name="FK_CHITIETS_RELATIONS_DONHANG" Association="Self.FK_CHITIETS_RELATIONS_DONHANG">
-      <End Role="DONHANG" EntitySet="DONHANG" />
-      <End Role="CHITIETSANPHAMTANGKEM" EntitySet="CHITIETSANPHAMTANGKEM" />
-    </AssociationSet>
-    <AssociationSet Name="FK_CHITIETS_RELATIONS_SANPHAM" Association="Self.FK_CHITIETS_RELATIONS_SANPHAM">
-      <End Role="SANPHAM" EntitySet="SANPHAM" />
-      <End Role="CHITIETSANPHAMTANGKEM" EntitySet="CHITIETSANPHAMTANGKEM" />
     </AssociationSet>
     <AssociationSet Name="FK_DANHGIAD_RELATIONS_KHACHHAN" Association="Self.FK_DANHGIAD_RELATIONS_KHACHHAN">
       <End Role="KHACHHANG" EntitySet="KHACHHANG" />
@@ -529,23 +490,19 @@
       <End Role="MUCDOHAILONG" EntitySet="MUCDOHAILONG" />
       <End Role="DANHGIADICHVU" EntitySet="DANHGIADICHVU" />
     </AssociationSet>
-    <AssociationSet Name="FK_DONHANG_RELATIONS_KHACHHAN" Association="Self.FK_DONHANG_RELATIONS_KHACHHAN">
+    <AssociationSet Name="FK_DONHANG_KHACHHANG" Association="Self.FK_DONHANG_KHACHHANG">
       <End Role="KHACHHANG" EntitySet="KHACHHANG" />
       <End Role="DONHANG" EntitySet="DONHANG" />
     </AssociationSet>
-    <AssociationSet Name="FK_DONHANG_RELATIONS_KHUYENMA" Association="Self.FK_DONHANG_RELATIONS_KHUYENMA">
+    <AssociationSet Name="FK_DONHANG_KHUYENMAI" Association="Self.FK_DONHANG_KHUYENMAI">
       <End Role="KHUYENMAI" EntitySet="KHUYENMAI" />
       <End Role="DONHANG" EntitySet="DONHANG" />
     </AssociationSet>
-    <AssociationSet Name="FK_HINHTHUC_RELATIONS_LOAISANP" Association="Self.FK_HINHTHUC_RELATIONS_LOAISANP">
-      <End Role="LOAISANPHAM" EntitySet="LOAISANPHAM" />
-      <End Role="HINHTHUCGIAMGIA" EntitySet="HINHTHUCGIAMGIA" />
-    </AssociationSet>
-    <AssociationSet Name="FK_HINHTHUCTANGKEM_LOAISANPHAM" Association="Self.FK_HINHTHUCTANGKEM_LOAISANPHAM">
-      <End Role="LOAISANPHAM" EntitySet="LOAISANPHAM" />
+    <AssociationSet Name="FK_HINHTHUCTANGKEM_SANPHAM" Association="Self.FK_HINHTHUCTANGKEM_SANPHAM">
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
       <End Role="HINHTHUCTANGKEM" EntitySet="HINHTHUCTANGKEM" />
     </AssociationSet>
-    <AssociationSet Name="FK_HOADON_RELATIONS_DONHANG" Association="Self.FK_HOADON_RELATIONS_DONHANG">
+    <AssociationSet Name="FK_HOADON_DONHANG" Association="Self.FK_HOADON_DONHANG">
       <End Role="DONHANG" EntitySet="DONHANG" />
       <End Role="HOADON" EntitySet="HOADON" />
     </AssociationSet>
@@ -559,6 +516,10 @@
     </AssociationSet>
     <AssociationSet Name="FK_KHUYENMA_RELATIONS_LOAIKHACHHANG" Association="Self.FK_KHUYENMA_RELATIONS_LOAIKHACHHANG">
       <End Role="LOAIKHACHHANG" EntitySet="LOAIKHACHHANG" />
+      <End Role="KHUYENMAI" EntitySet="KHUYENMAI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KHUYENMAI_LOAISANPHAM" Association="Self.FK_KHUYENMAI_LOAISANPHAM">
+      <End Role="LOAISANPHAM" EntitySet="LOAISANPHAM" />
       <End Role="KHUYENMAI" EntitySet="KHUYENMAI" />
     </AssociationSet>
     <AssociationSet Name="FK_LOAIKHAC_RELATIONS_CAPDOTHE" Association="Self.FK_LOAIKHAC_RELATIONS_CAPDOTHE">

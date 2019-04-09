@@ -9,8 +9,11 @@ namespace DataTransferObject
     public class SANPHAM_DTO
     {
         public int MASP { get; set; }
+        //public int MADH { get; set; }
         public string TENSP { get; set; }
+        public float GIA { get; set; }
         public int SOLUONG { get; set; }
+
         public Nullable<int> MALSP { get; set; }
         public string TENLSP { get; set; }
     }

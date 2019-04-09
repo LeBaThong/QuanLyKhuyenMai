@@ -35,6 +35,7 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.mPanelContent = new MetroFramework.Controls.MetroPanel();
             this.mPanelMenu = new MetroFramework.Controls.MetroPanel();
             this.mPanelHopDongNhanVien = new MetroFramework.Controls.MetroPanel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
@@ -49,7 +50,6 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.metroPanel = new MetroFramework.Controls.MetroPanel();
-            this.mPanelContent = new MetroFramework.Controls.MetroPanel();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnTroVe)).BeginInit();
             this.metroPanel1.SuspendLayout();
@@ -87,11 +87,13 @@
             // 
             this.btnTroVe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTroVe.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnTroVe.Image = ((System.Drawing.Image)(resources.GetObject("btnTroVe.Image")));
             this.btnTroVe.Location = new System.Drawing.Point(907, 3);
             this.btnTroVe.Name = "btnTroVe";
             this.btnTroVe.Size = new System.Drawing.Size(50, 44);
             this.btnTroVe.TabIndex = 1;
             this.btnTroVe.TabStop = false;
+            this.btnTroVe.Click += new System.EventHandler(this.btnTroVe_Click);
             // 
             // metroPanel1
             // 
@@ -149,6 +151,20 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(960, 475);
             this.tableLayoutPanel2.TabIndex = 1;
+            // 
+            // mPanelContent
+            // 
+            this.mPanelContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mPanelContent.HorizontalScrollbarBarColor = true;
+            this.mPanelContent.HorizontalScrollbarHighlightOnWheel = false;
+            this.mPanelContent.HorizontalScrollbarSize = 10;
+            this.mPanelContent.Location = new System.Drawing.Point(278, 3);
+            this.mPanelContent.Name = "mPanelContent";
+            this.mPanelContent.Size = new System.Drawing.Size(679, 469);
+            this.mPanelContent.TabIndex = 1;
+            this.mPanelContent.VerticalScrollbarBarColor = true;
+            this.mPanelContent.VerticalScrollbarHighlightOnWheel = false;
+            this.mPanelContent.VerticalScrollbarSize = 10;
             // 
             // mPanelMenu
             // 
@@ -300,9 +316,9 @@
             this.metroLabel3.ForeColor = System.Drawing.Color.White;
             this.metroLabel3.Location = new System.Drawing.Point(59, 13);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(175, 25);
+            this.metroLabel3.Size = new System.Drawing.Size(134, 25);
             this.metroLabel3.TabIndex = 4;
-            this.metroLabel3.Text = "Nhập xuất đơn hàng";
+            this.metroLabel3.Text = "Xử lý đơn hàng";
             this.metroLabel3.UseCustomBackColor = true;
             this.metroLabel3.UseCustomForeColor = true;
             this.metroLabel3.Click += new System.EventHandler(this.metroLabel_Click);
@@ -381,20 +397,6 @@
             this.metroPanel.VerticalScrollbarBarColor = true;
             this.metroPanel.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel.VerticalScrollbarSize = 10;
-            // 
-            // mPanelContent
-            // 
-            this.mPanelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mPanelContent.HorizontalScrollbarBarColor = true;
-            this.mPanelContent.HorizontalScrollbarHighlightOnWheel = false;
-            this.mPanelContent.HorizontalScrollbarSize = 10;
-            this.mPanelContent.Location = new System.Drawing.Point(278, 3);
-            this.mPanelContent.Name = "mPanelContent";
-            this.mPanelContent.Size = new System.Drawing.Size(679, 469);
-            this.mPanelContent.TabIndex = 1;
-            this.mPanelContent.VerticalScrollbarBarColor = true;
-            this.mPanelContent.VerticalScrollbarHighlightOnWheel = false;
-            this.mPanelContent.VerticalScrollbarSize = 10;
             // 
             // templateKhuyenMai
             // 

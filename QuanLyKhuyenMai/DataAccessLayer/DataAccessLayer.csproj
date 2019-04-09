@@ -69,9 +69,6 @@
     <Compile Include="CHITIETHOADON.cs">
       <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
     </Compile>
-    <Compile Include="CHITIETSANPHAMTANGKEM.cs">
-      <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
-    </Compile>
     <Compile Include="DANHGIADICHVU.cs">
       <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
     </Compile>
@@ -118,6 +115,7 @@
     <Compile Include="MUCDOHAILONG.cs">
       <DependentUpon>QuanLyKhuyenMai.tt</DependentUpon>
     </Compile>
+    <Compile Include="PHUONGTHUCTHANHTOAN_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanLyKhuyenMai.Context.cs">
       <AutoGen>True</AutoGen>
@@ -156,24 +154,26 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.Config" />
-    <None Include="packages.config" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <EntityDeploy Include="QuanLyKhuyenMai.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>QuanLyKhuyenMai.Designer.cs</LastGenOutput>
     </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
     <None Include="QuanLyKhuyenMai.edmx.diagram">
       <DependentUpon>QuanLyKhuyenMai.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="QuanLyKhuyenMai.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QuanLyKhuyenMai.edmx</DependentUpon>
       <LastGenOutput>QuanLyKhuyenMai.Context.cs</LastGenOutput>
+      <DependentUpon>QuanLyKhuyenMai.edmx</DependentUpon>
     </Content>
     <Content Include="QuanLyKhuyenMai.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

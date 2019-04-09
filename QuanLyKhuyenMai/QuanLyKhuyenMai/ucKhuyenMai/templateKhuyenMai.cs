@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Controls;
+using QuanLyKhuyenMai.ucHeThong;
 
 namespace QuanLyKhuyenMai.ucKhuyenMai
 {
@@ -16,6 +17,19 @@ namespace QuanLyKhuyenMai.ucKhuyenMai
         public templateKhuyenMai()
         {
             InitializeComponent();
+        }
+        private void btnTroVe_Click(object sender, EventArgs e)
+        {
+            //Khởi tạo user màn hình chính
+            ucManHinhChinh ucManHinhChinh = new ucManHinhChinh();
+            ucManHinhChinh.Dock = DockStyle.Fill;
+            //Add vào panel chính
+            FormMain.FrmMain.MetroContainer.Controls.Add(ucManHinhChinh);
+            FormMain.FrmMain.MetroContainer.Controls["ucManHinhChinh"].BringToFront();
+            foreach (templateKhuyenMai templateKhuyenMai in FormMain.FrmMain.MetroContainer.Controls.OfType<templateKhuyenMai>())
+            {
+                FormMain.FrmMain.MetroContainer.Controls.Remove(templateKhuyenMai);
+            }
         }
 
         private void mPanelMenuItem_MouseHover(object sender, EventArgs e)

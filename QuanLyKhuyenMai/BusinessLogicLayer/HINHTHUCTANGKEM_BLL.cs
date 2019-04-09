@@ -13,5 +13,10 @@ namespace BusinessLogicLayer
         {
             return HINHTHUCTANGKEM_DAL.LoadHinhThucTangKem();
         }
+        public static HINHTHUCTANGKEM TimHTTK(int mahttk)
+        {
+            
+            return HINHTHUCTANGKEM_DAL.TimHTTK(mahttk);
+        }
     }
 }

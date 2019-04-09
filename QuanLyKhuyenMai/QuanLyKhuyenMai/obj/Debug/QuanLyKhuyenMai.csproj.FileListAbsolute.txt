@@ -27,7 +27,6 @@ C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\QuanLyKhuyenMai\bin\Debug\MetroFra
 C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\QuanLyKhuyenMai\bin\Debug\EntityFramework.dll
 C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\QuanLyKhuyenMai\bin\Debug\DataAccessLayer.dll.config
 C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\QuanLyKhuyenMai\bin\Debug\EntityFramework.xml
-C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\QuanLyKhuyenMai\obj\Debug\QuanLyKhuyenMai.ucDonHang.templateDonHang.resources
 C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\QuanLyKhuyenMai\obj\Debug\QuanLyKhuyenMai.ucKhuyenMai.ucDonHang.resources
 C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\QuanLyKhuyenMai\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\ThongLe\Desktop\DOAN\QuanLyKhuyenMai\QuanLyKhuyenMai\bin\Debug\EntityFramework.SqlServer.xml
