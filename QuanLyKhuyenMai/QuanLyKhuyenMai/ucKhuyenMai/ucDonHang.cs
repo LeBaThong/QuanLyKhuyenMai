@@ -38,6 +38,7 @@ namespace QuanLyKhuyenMai.ucKhuyenMai
             mCmbLoaiSanPham.DisplayMember = "TENLSP";
             mCmbLoaiSanPham.ValueMember = "MALSP";
 
+           
             //load san pham lên combobox san pham
 
             mCmbSanPham.DataSource = SANPHAM_BLL.LoadSanPham(mCmbLoaiSanPham.Text.Trim());
@@ -89,8 +90,19 @@ namespace QuanLyKhuyenMai.ucKhuyenMai
             int b = DateTime.Compare(NgayKetThucKM, NgayTaoDH);
 
             //Tìm khách hàng
+            KHACHHANG kh = new KHACHHANG();
             int maKH = Convert.ToInt32(txtMaKH.Text.Trim());
-            KHACHHANG kh = KHACHHANG_BLL.TimKhachHang(maKH);
+            if (KHACHHANG_BLL.TimKhachHang(Convert.ToInt32(txtMaKH.Text)) != null)
+            {
+                kh = KHACHHANG_BLL.TimKhachHang(maKH);
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy khách hàng này");
+                return;
+            }
+            
+           
 
             //Xử lý thêm sản phẩm
             int masp = Convert.ToInt32(mCmbSanPham.SelectedValue);
@@ -117,7 +129,7 @@ namespace QuanLyKhuyenMai.ucKhuyenMai
                                 int sl = (int)numSL.Value;
                                 spDTOupdate.GIA += sl * (gia - gia * ((float)phantramGG / 100));
 
-                                MessageBox.Show("Sản phẩm được khuyến mãi giảm giá " + spDTOupdate.GIA + " nghìn đồng", "Thông báo");
+                                MessageBox.Show("Sản phẩm được khuyến mãi giảm giá  " + gia * ((float)phantramGG / 100) + " đồng/sản phẩm", "Thông báo");
                                 coKM = true;
                             }
                             else if (km.MAHTTK != null)//nếu đúng thì xử lý khuyến mãi tặng kèm
@@ -177,7 +189,7 @@ namespace QuanLyKhuyenMai.ucKhuyenMai
                                 int sl = (int)numSL.Value;
                                 spDTO.GIA = sl * (gia - gia * ((float)phantramGG / 100));
 
-                                MessageBox.Show("Sản phẩm được khuyến mãi giảm giá", "Thông báo");
+                                MessageBox.Show("Sản phẩm được khuyến mãi giảm giá " + gia * ((float)phantramGG / 100) + " đồng/sản phẩm", "Thông báo");
                                 coKM = true;
                             }
                             else if (km.MAHTVC != null)
@@ -250,6 +262,7 @@ namespace QuanLyKhuyenMai.ucKhuyenMai
                                     spDTOTK.TENLSP = sp.LOAISANPHAM.TENLSP;
                                     spDTOTK.GIA = 0;
                                     lsSanPhamDonHang.Add(spDTOTK);
+
                                 }
                                 coKM = true;
                             }
@@ -356,8 +369,18 @@ namespace QuanLyKhuyenMai.ucKhuyenMai
 
         private void btnTaoDH_Click(object sender, EventArgs e)
         {
+            KHACHHANG kh = new KHACHHANG();
             //lấy đối tượng khách hàng
-            KHACHHANG kh = KHACHHANG_BLL.TimKhachHang(Convert.ToInt32(txtMaKH.Text));
+            if (KHACHHANG_BLL.TimKhachHang(Convert.ToInt32(txtMaKH.Text))!=null)
+            {
+                kh = KHACHHANG_BLL.TimKhachHang(Convert.ToInt32(txtMaKH.Text));
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy khách hàng này");
+                return;
+            }
+            
             //tạo đơn hàng từ giao diện
             DONHANG dh = new DONHANG();
             dh.MAKH = kh.MAKH;
@@ -394,7 +417,8 @@ namespace QuanLyKhuyenMai.ucKhuyenMai
             }
             else
             {
-                dh.TRANGTHAI = false;
+                rdbHoanThanh.Checked=true;
+                dh.TRANGTHAI = true;
             }
             //lấy số tiền giam của voucher
             if (txtVoucher.Text != "")
@@ -566,6 +590,7 @@ namespace QuanLyKhuyenMai.ucKhuyenMai
             numSL.Value = 0;
             kmDH = null;
             soTienVC = 0;
+            rdbDangCho.Checked = true;        
             coKM = false;
         }
     }
